@@ -20,6 +20,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    firebase: {
+      apiKey: "AIzaSyCy_GdQUjSuPlyJ55maGa-rHwWZ_tcgpkY",
+      authDomain: "sketch-shop.firebaseapp.com",
+      databaseURL: "https://sketch-shop.firebaseio.com",
+      projectId: "sketch-shop",
+      storageBucket: "sketch-shop.appspot.com",
+      messagingSenderId: "74062581896",
     }
   };
 
