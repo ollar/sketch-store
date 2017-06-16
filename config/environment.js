@@ -1,5 +1,7 @@
 /* eslint-env node */
 
+require('dotenv').config();
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'scetch-shop',
@@ -22,13 +24,13 @@ module.exports = function(environment) {
       // when it is created
     },
     firebase: {
-      apiKey: "AIzaSyCy_GdQUjSuPlyJ55maGa-rHwWZ_tcgpkY",
-      authDomain: "sketch-shop.firebaseapp.com",
-      databaseURL: "https://sketch-shop.firebaseio.com",
-      projectId: "sketch-shop",
-      storageBucket: "sketch-shop.appspot.com",
-      messagingSenderId: "74062581896",
-    }
+      apiKey: process.env.FIREBASE_CONNECT_apiKey,
+      authDomain: process.env.FIREBASE_CONNECT_authDomain,
+      databaseURL: process.env.FIREBASE_CONNECT_databaseURL,
+      projectId: process.env.FIREBASE_CONNECT_projectId,
+      storageBucket: process.env.FIREBASE_CONNECT_storageBucket,
+      messagingSenderId: process.env.FIREBASE_CONNECT_messagingSenderId,
+    },
   };
 
   if (environment === 'development') {
