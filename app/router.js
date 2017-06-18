@@ -16,13 +16,12 @@ Router.map(function() {
     this.route('index');
   });
 
-  this.route('contacts');
-
   this.route('page', function() {
-    this.route('details', { path: '/:page_id' });
+    this.route('details', { path: '/details/:page_id' });
     this.route('update', { path: '/update/:page_id'});
   });
 
+  this.route('contacts');
   this.route('not-found', { path: '/*path' });
 });
 
