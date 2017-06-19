@@ -39,6 +39,7 @@
     "ember-resolver": "^2.0.3",
     "ember-source": "~2.12.0",
     "emberfire": "^2.0.7",
+    "eslint": "^4.0.0",
     "loader.js": "^4.2.3"
   },
   "engines": {

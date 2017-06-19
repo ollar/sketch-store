@@ -1,0 +1,9 @@
+<h1 class="page-title">
+  {{model.title}}
+</h1>
+
+<div class="page-content">
+  {{#each model.blocks as |block|}}
+    {{page-block block=block}}
+  {{/each}}
+</div>

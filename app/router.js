@@ -16,10 +16,11 @@ Router.map(function() {
     this.route('index');
   });
 
-  this.route('page', function() {
-    this.route('details', { path: '/details/:page_id' });
-    this.route('update', { path: '/update/:page_id'});
+  this.route('pages');
+  this.route('page', { path: 'page/:page_id' }, function() {
+    this.route('edit');
   });
+  this.route('page-create', { path: 'page/new' });
 
   this.route('contacts');
   this.route('not-found', { path: '/*path' });

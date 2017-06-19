@@ -1,0 +1,13 @@
+<h1>
+  {{t 'pages.title'}}
+</h1>
+
+<ol>
+  {{#each model as |page|}}
+    <li>
+      {{link-to page.title 'page' page}}
+    </li>
+  {{else}}
+    {{t 'messages.empty'}}
+  {{/each}}
+</ol>
