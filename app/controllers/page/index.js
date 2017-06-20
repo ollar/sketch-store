@@ -1,9 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  // not used now
-  blocks: Ember.computed('model.blocks', function() {
-    // return this.get('model.blocks').toArray().reverse();
-    return this.get('model.blocks').toArray();
-  }),
+  actions: {
+    removePage() {
+      this.get('model').destroyRecord()
+        .then(() => {
+          this.send('notify', {
+            type: 'info',
+            text: this.get('i18n').t('messages.page_removed_success'),
+          });
+          this.transitionToRoute('pages');
+        })
+    }
+  }
 });

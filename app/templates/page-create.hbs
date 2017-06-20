@@ -1,17 +1,17 @@
 <form class="pure-form pure-form-aligned" {{action 'handleSubmit' on='submit'}}>
     <div class="pure-control-group">
-        <label for="title">{{t 'forms.email.label'}}</label>
+        <label for="title">{{t 'forms.title.label'}}</label>
         {{input
           id="title"
           type="text"
           name="title"
           value=title
-          placeholder=(t 'forms.email.placeholder')}}
+          placeholder=(t 'forms.title.placeholder')}}
     </div>
 
     {{#each blocks as |block|}}
       <div class="pure-control-group">
-        {{textarea value=block.content cols="80" rows="6"}}
+        {{textarea value=block.content}}
       </div>
     {{/each}}
 

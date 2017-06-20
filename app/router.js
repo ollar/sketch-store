@@ -7,11 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('category', function() {
-    this.route('index');
-    this.route('details', { path: '/:category_id' });
-    this.route('update', { path: '/update/:category_id' });
+  this.route('categories');
+  this.route('category', { path: '/category/:category_id'}, function() {
+    this.route('edit');
   });
+  this.route('category-create', { path: 'category/new' });
+
+
   this.route('product', function() {
     this.route('index');
   });

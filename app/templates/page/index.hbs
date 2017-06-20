@@ -2,6 +2,13 @@
   {{model.title}}
 </h1>
 
+<div class="quick-links">
+  {{link-to (t 'links.page_edit') 'page.edit' model}}
+  <button type="button" {{action 'removePage'}}>
+    {{t 'buttons.remove_page'}}
+  </button>
+</div>
+
 <div class="page-content">
   {{#each model.blocks as |block|}}
     {{page-block block=block}}
