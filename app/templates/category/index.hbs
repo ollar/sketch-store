@@ -1,11 +1,11 @@
-<h1 class="page-title">
+<h1>
   {{model.title}}
 </h1>
 
 {{#quick-links}}
-  {{link-to (t 'links.page_edit') 'page.edit' model}}
-  <button type="button" {{action 'removePage'}}>
-    {{t 'buttons.remove_page'}}
+  {{link-to (t 'links.category_edit') 'category.edit' model}}
+  <button type="button" {{action 'removeCategory'}}>
+    {{t 'buttons.remove_category'}}
   </button>
 {{/quick-links}}
 

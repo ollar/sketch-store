@@ -2,9 +2,9 @@
   {{t 'pages.title'}}
 </h1>
 
-<div class="quick-links">
+{{#quick-links}}
   {{link-to (t 'links.create_page') 'page-create'}}
-</div>
+{{/quick-links}}
 
 <ol>
   {{#each model as |page|}}

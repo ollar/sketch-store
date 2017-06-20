@@ -2,35 +2,32 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   blocks: Ember.computed.alias('model.blocks'),
+  images: Ember.computed.alias('model.images'),
+
   actions: {
     addBlock() {
       const block = this.get('store').createRecord('block', {
         type: 'text',
-        page: this.get('model'),
+        category: this.get('model'),
       });
 
       this.get('blocks').pushObject(block);
     },
 
     handleSubmit() {
-      const page = this.get('store').createRecord('page', {
-        title: this.get('title'),
-        blocks: this.get('blocks'),
-        dateCreated: new Date(),
-        modified: new Date(),
-      });
-
+      const category = this.get('model');
       this.get('blocks').forEach((block) => {
         block.save();
       });
 
-      page.save().then(() => {
+      category.set('modified', new Date());
+      category.save().then(() => {
         this.send('notify', {
           type: 'success',
-          text: this.get('i18n').t('messages.page_create_success'),
+          text: this.get('i18n').t('messages.category_edit_success'),
         });
-        this.transitionToRoute('page', page);
+        this.transitionToRoute('category', category);
       });
     }
-  },
+  }
 });

@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
     addBlock() {
       const block = this.get('store').createRecord('block', {
         type: 'text',
+        page: this.get('model'),
       });
 
       this.get('blocks').pushObject(block);
