@@ -1,9 +1,9 @@
 {
-  "name": "scetch-shop",
+  "name": "sketch-shop",
   "dependencies": {
     "pure": "^1.0.0"
   },
-  "homepage": "https://github.com/ollar/scetch-store",
+  "homepage": "https://github.com/ollar/sketch-store",
   "authors": [
     "Oleg Larkin <olegollar@gmail.com>"
   ],

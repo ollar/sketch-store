@@ -4,7 +4,7 @@ require('dotenv').config();
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'scetch-shop',
+    modulePrefix: 'sketch-shop',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

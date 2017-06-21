@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { initialize } from 'scetch-shop/initializers/i18n';
+import { initialize } from 'sketch-shop/initializers/i18n';
 import { module, test } from 'qunit';
 import destroyApp from '../../helpers/destroy-app';
 
