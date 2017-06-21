@@ -13,10 +13,13 @@
       <div class="pure-control-group">
         {{textarea value=block.content}}
       </div>
+      <button type="button" {{action 'removeBlock' block}}>
+        {{t 'buttons.remove_block'}}
+      </button>
     {{/each}}
 
     <div class="pure-control-group">
-      <button type="button" class="pure-button" {{action 'addBlock'}}>{{t 'buttons.add_block'}}</button>
+      <button type="button" class="pure-button" {{action 'addBlock' 'page'}}>{{t 'buttons.add_block'}}</button>
     </div>
 
     <div class="pure-controls">
