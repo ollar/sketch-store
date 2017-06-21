@@ -24,7 +24,7 @@ export default Ember.Component.extend({
       const files = Array.prototype.slice.call(e.dataTransfer.files);
 
       files.forEach((file) => {
-        console.log(file);
+        this.uploadImage(file);
       });
     },
   },
