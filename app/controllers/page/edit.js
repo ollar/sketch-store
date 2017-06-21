@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   blocks: Ember.computed.alias('model.blocks'),
+  title: Ember.computed.alias('model.title'),
   actions: {
     addBlock() {
       const block = this.get('store').createRecord('block', {

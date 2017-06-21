@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  title: Ember.computed.alias('model.title'),
   blocks: Ember.computed.alias('model.blocks'),
   actions: {
     addBlock() {
@@ -13,9 +14,9 @@ export default Ember.Controller.extend({
     },
 
     handleSubmit() {
-      const page = this.get('store').createRecord('page', {
-        title: this.get('title'),
-        blocks: this.get('blocks'),
+      const page = this.get('model');
+
+      page.setProperties({
         dateCreated: new Date(),
         modified: new Date(),
       });
