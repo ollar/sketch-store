@@ -1,18 +1,10 @@
 import Ember from 'ember';
+import BlockManagerMixin from '../../mixins/block-manage';
 
-export default Ember.Controller.extend({
+export default Ember.Controller.extend(BlockManagerMixin, {
   blocks: Ember.computed.alias('model.blocks'),
   title: Ember.computed.alias('model.title'),
   actions: {
-    addBlock() {
-      const block = this.get('store').createRecord('block', {
-        type: 'text',
-        page: this.get('model'),
-      });
-
-      this.get('blocks').pushObject(block);
-    },
-
     handleSubmit() {
       const page = this.get('model');
       this.get('blocks').forEach((block) => {

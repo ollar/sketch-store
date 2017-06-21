@@ -9,6 +9,8 @@
           placeholder=(t 'forms.title.placeholder')}}
     </div>
 
+    {{image-drop-area images=images}}
+
     {{#each blocks as |block|}}
       <div class="pure-control-group">
         {{textarea value=block.content}}
