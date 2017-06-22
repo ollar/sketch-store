@@ -1,16 +1,31 @@
 <h1>
-  {{model.title}}
+    {{model.title}}
 </h1>
 
 {{#quick-links}}
-  {{link-to (t 'links.category_edit') 'category.edit' model}}
-  <button type="button" {{action 'removeCategory'}}>
-    {{t 'buttons.remove_category'}}
-  </button>
+    {{link-to (t 'links.category_edit') 'category.edit' model}}
+
+    <button type="button" {{action 'removeCategory'}}>
+        {{t 'buttons.remove_category'}}
+    </button>
 {{/quick-links}}
 
 <div class="page-content">
-  {{#each model.blocks as |block|}}
-    {{page-block block=block}}
-  {{/each}}
+    {{#each model.images as |image|}}
+        <div class="image">
+            <img src="{{image.url}}" alt="">
+        </div>
+    {{/each}}
+
+    {{#each model.blocks as |block|}}
+        {{page-block block=block}}
+    {{/each}}
+
+    {{#each model.products as |product|}}
+        <div>
+            aaa
+        </div>
+    {{else}}
+        {{t 'messages.empty'}}
+    {{/each}}
 </div>
