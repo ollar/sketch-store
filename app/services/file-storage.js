@@ -2,21 +2,38 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   firebase: Ember.inject.service(),
-  firebase: Ember.inject.service(),
+  store: Ember.inject.service(),
 
-  init() {
-    this._super(...arguments);
-    this.set('storageRef', this.get('firebase').database.app.storage().ref());
+  storageRef: Ember.computed(function() {
+    return this.get('firebase').database.app.storage().ref();
+  }),
+
+  upload(model, file, parentType) {
+    return this.get('storageRef').child(`${parentType}/${model.id}/${file.name}`).put(file)
+      .then((snapshot) => {
+        const imageData = snapshot.metadata;
+        const imageModel = this.get('store').createRecord('image', {
+            name: imageData.name,
+            fullPath: imageData.fullPath,
+            url: imageData.downloadURLs[0],
+            [parentType]: model,
+          });
+
+        model.get('images').pushObject(imageModel);
+        imageModel.save();
+        model.save();
+      })
+      .catch((e) => console.log(e));
   },
 
-  upload(file, path) {
-    return this.get('storageRef').child(path + '/' + file.name).put(file).then((snapshot) => {
-      // this.get('storageRef').child(path + '/' + file.name)
-      //   .getDownloadURL().then(function(url) {
-      //     console.log(url)
-      //   });
+  remove(model, imageModel) {
+    return this.get('storageRef').child(imageModel.get('fullPath'))
+      .delete().then(() => {
+        model.get('images').removeObject(imageModel);
 
-      return snapshot.metadata;
-    }).catch((e) => console.log(e));
+        imageModel.destroyRecord();
+        model.save();
+        return true;
+      });
   }
 });

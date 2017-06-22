@@ -27,5 +27,9 @@ export default Ember.Component.extend({
         this.uploadImage(file);
       });
     },
+
+    removeImage(imageModel) {
+      return this.removeImage(imageModel);
+    }
   },
 });

@@ -1,16 +1,21 @@
-{{#each images as |image|}}
-    <img src="{{image.url}}" alt="">
-{{else}}
-    {{t 'no_images_yet'}}
-{{/each}}
-
 <div
+    title={{t 'category.drop_image_here'}}
     class="image-drop-area"
     ondragenter={{action 'dragEnter'}}
     ondragover={{action 'dragOver'}}
     ondragleave={{action 'dragLeave'}}
     ondrop={{action 'drop'}}
 >
-    {{t 'category.drop_image_here'}}
+    {{#each images as |image|}}
+        <div>
+            <img src="{{image.url}}" alt="">
+            <button {{action 'removeImage' image}}>
+                remove
+            </button>
+        </div>
+    {{else}}
+        {{t 'no_images_yet'}}
+        {{t 'category.drop_image_here'}}
+    {{/each}}
 </div>
 {{yield}}

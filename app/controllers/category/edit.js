@@ -8,20 +8,15 @@ export default Ember.Controller.extend(BlockManagerMixin, {
 
   actions: {
     uploadImage(file) {
-      this.get('fileStorage').upload(file, 'category/' + this.get('model').id + '/images')
-        .then((imageData) => {
-          var imageModel = this.get('store').createRecord('image', {
-            name: imageData.name,
-            contentType: imageData.contentType,
-            size: imageData.size,
-            url: imageData.downloadURLs[0],
-          });
-
-          this.get('model.images').pushObject(imageModel);
-
-          imageModel.save();
-          this.get('model').save();
+      this.get('fileStorage').upload(this.get('model'), file, 'category')
+        .then(() => {
+          console.log('aa image');
         });
+    },
+
+    removeImage(imageModel) {
+      return this.get('fileStorage').remove(this.get('model'), imageModel)
+        .then(() => console.log('ok'));
     },
 
     handleSubmit() {
