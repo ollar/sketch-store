@@ -9,14 +9,22 @@
           placeholder=(t 'forms.title.placeholder')}}
     </div>
 
+    {{image-drop-area
+      images=images
+      uploadImage=(action 'uploadImage')
+      removeImage=(action 'removeImage')}}
+
     {{#each blocks as |block|}}
       <div class="pure-control-group">
         {{textarea value=block.content}}
       </div>
+      <button type="button" {{action 'removeBlock' block}}>
+        {{t 'buttons.remove_block'}}
+      </button>
     {{/each}}
 
     <div class="pure-control-group">
-      <button type="button" class="pure-button" {{action 'addBlock'}}>{{t 'buttons.add_block'}}</button>
+      <button type="button" class="pure-button" {{action 'addBlock' 'category'}}>{{t 'buttons.add_block'}}</button>
     </div>
 
     <div class="pure-controls">

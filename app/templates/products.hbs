@@ -1,0 +1,17 @@
+<h1>
+  {{t 'products.title'}}
+</h1>
+
+{{#quick-links}}
+  {{link-to (t 'links.create_product') 'product-create'}}
+{{/quick-links}}
+
+<ol>
+  {{#each model as |product|}}
+    <li>
+      {{link-to product.title 'product' product}}
+    </li>
+  {{else}}
+    {{t 'messages.empty'}}
+  {{/each}}
+</ol>

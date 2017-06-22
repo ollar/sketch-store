@@ -13,10 +13,11 @@ Router.map(function() {
   });
   this.route('category-create', { path: 'category/new' });
 
-
-  this.route('product', function() {
-    this.route('index');
+  this.route('products');
+  this.route('product', { path: 'product/:page_id' }, function() {
+    this.route('edit');
   });
+  this.route('product-create', { path: 'product/new' });
 
   this.route('pages');
   this.route('page', { path: 'page/:page_id' }, function() {
