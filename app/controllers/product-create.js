@@ -2,7 +2,7 @@ import Ember from 'ember';
 import BlockManagerMixin from '../mixins/block-manage';
 import ImageManageMixin from '../mixins/image-manage';
 
-export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin('product'), {
+export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin, {
   blocks: Ember.computed.alias('model.blocks'),
   images: Ember.computed.alias('model.images'),
 
