@@ -1,27 +1,24 @@
 import Ember from 'ember';
 
-const ImageManageMixin = function(parentType) {
-  const _ImageManageMixin = Ember.Mixin.create({
-    fileStorage: Ember.inject.service(),
+const ImageManageMixin = Ember.Mixin.create({
+  fileStorage: Ember.inject.service(),
 
-    actions: {
-      uploadImage(file) {
-        this.get('fileStorage').upload(this.get('model'), file, parentType)
-          .then(() => {
-            console.log('aa image');
-          });
-      },
+  actions: {
+    uploadImage(file) {
+      const image = this.get('store').createRecord('image', {
+        url: URL.createObjectURL(file),
+        file: file,
+      });
 
-      removeImage(imageModel) {
-        return this.get('fileStorage').remove(this.get('model'), imageModel)
-          .then(() => console.log('ok'));
-      },
-    }
-  });
+      this.get('model.images').pushObject(image);
+    },
 
-  _ImageManageMixin[Ember.NAME_KEY] = 'ImageManageMixin';
+    removeImage(imageModel) {
+      this.get('model.images').removeObject(imageModel);
+    },
+  }
+});
 
-  return _ImageManageMixin;
-}
+ImageManageMixin[Ember.NAME_KEY] = 'ImageManageMixin';
 
 export default ImageManageMixin;

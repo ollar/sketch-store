@@ -8,32 +8,14 @@ export default Ember.Service.extend({
     return this.get('firebase').database.app.storage().ref();
   }),
 
-  upload(model, file, parentType) {
-    return this.get('storageRef').child(`${parentType}/${model.id}/${file.name}`).put(file)
-      .then((snapshot) => {
-        const imageData = snapshot.metadata;
-        const imageModel = this.get('store').createRecord('image', {
-            name: imageData.name,
-            fullPath: imageData.fullPath,
-            url: imageData.downloadURLs[0],
-            [parentType]: model,
-          });
-
-        model.get('images').pushObject(imageModel);
-        imageModel.save();
-        model.save();
-      })
+  upload(path, file) {
+    return this.get('storageRef').child(path).put(file)
+      .then((snapshot) => snapshot.metadata)
       .catch((e) => console.log(e));
   },
 
-  remove(model, imageModel) {
+  remove(imageModel) {
     return this.get('storageRef').child(imageModel.get('fullPath'))
-      .delete().then(() => {
-        model.get('images').removeObject(imageModel);
-
-        imageModel.destroyRecord();
-        model.save();
-        return true;
-      });
+      .delete();
   }
 });
