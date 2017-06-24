@@ -14,7 +14,22 @@ const ImageManageMixin = Ember.Mixin.create({
     },
 
     removeImage(imageModel) {
-      this.get('model.images').removeObject(imageModel);
+      const url = imageModel.get('url');
+
+      if (url.match(url.match('blob:'))) {
+        return this.get('model.images').removeObject(imageModel);
+      } else {
+        return this.get('fileStorage').remove(imageModel)
+          .then(() => {
+            this.get('model.images').removeObject(imageModel);
+            imageModel.destroyRecord();
+            this.get('model').save();
+            return true;
+          });
+      }
+
+
+      return;
     },
   }
 });

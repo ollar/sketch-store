@@ -8,16 +8,6 @@ export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin, {
   fileStorage: Ember.inject.service(),
 
   actions: {
-    removeImage(imageModel) {
-      return this.get('fileStorage').remove(imageModel)
-        .then(() => {
-          this.get('model.images').removeObject(imageModel);
-          imageModel.destroyRecord();
-          this.get('model').save();
-          return true;
-        });
-    },
-
     handleSubmit() {
       const product = this.get('model');
       this.get('blocks').forEach((block) => {
