@@ -9,10 +9,14 @@
           placeholder=(t 'forms.title.placeholder')}}
     </div>
 
-    {{image-drop-area
-      images=images
-      uploadImage=(action 'uploadImage')
-      removeImage=(action 'removeImage')}}
+    {{#unless (eq type 'page')}}
+
+      {{image-drop-area
+        images=images
+        uploadImage=(action 'uploadImage')
+        removeImage=(action 'removeImage')}}
+
+    {{/unless}}
 
     {{#each blocks as |block|}}
       <div class="pure-control-group">

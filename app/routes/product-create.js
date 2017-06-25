@@ -1,11 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  // model() {
+  //   return Ember.RSVP.hash({
+  //     product: this.get('store').createRecord('product'),
+  //     categories: this.get('store').findAll('category'),
+  //   });
+  // },
+
   model() {
-    return Ember.RSVP.hash({
-      product: this.get('store').createRecord('product'),
-      categories: this.get('store').findAll('category'),
-    });
+    console.log(this)
+    return this.get('store').createRecord('product');
   },
 
   renderTemplate(controller, model) {
