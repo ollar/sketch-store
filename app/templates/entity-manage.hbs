@@ -5,19 +5,8 @@
           id="title"
           type="text"
           name="title"
-          value=model.product.title
+          value=model.title
           placeholder=(t 'forms.title.placeholder')}}
-    </div>
-
-    <div class="pure-control-group">
-
-    <select>
-      {{#each categories as |category|}}
-        <option value="{{category.id}}">
-          {{category.title}}
-        </option>
-      {{/each}}
-    </select>
     </div>
 
     {{image-drop-area
@@ -35,7 +24,7 @@
     {{/each}}
 
     <div class="pure-control-group">
-      <button type="button" class="pure-button" {{action 'addBlock' 'product'}}>{{t 'buttons.add_block'}}</button>
+      <button type="button" class="pure-button" {{action 'addBlock' type}}>{{t 'buttons.add_block'}}</button>
     </div>
 
     <div class="pure-controls">

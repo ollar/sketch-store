@@ -27,9 +27,6 @@ const ImageManageMixin = Ember.Mixin.create({
             return true;
           });
       }
-
-
-      return;
     },
   }
 });

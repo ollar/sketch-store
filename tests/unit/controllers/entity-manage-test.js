@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:category/edit', 'Unit | Controller | category/edit', {
+moduleFor('controller:entity-manage', 'Unit | Controller | entity manage', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

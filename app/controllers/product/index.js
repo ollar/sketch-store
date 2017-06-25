@@ -5,20 +5,20 @@ export default Ember.Controller.extend({
   fileStorage: Ember.inject.service(),
 
   actions: {
-    removeCategory() {
+    removeProduct() {
       if (this.get('model.images.length')) {
         this.get('model.images').forEach((imageModel) => {
           this.get('fileStorage').remove(imageModel);
         });
       }
 
-      destroyModel(this.get('model'), ['images', 'blocks'])
+      destroyModel(this.get('model'), ['blocks', 'images'])
         .then(() => {
           this.send('notify', {
             type: 'info',
-            text: this.get('i18n').t('messages.category_removed_success'),
+            text: this.get('i18n').t('messages.product_removed_success'),
           });
-          this.transitionToRoute('categories');
+          this.transitionToRoute('products');
         });
     }
   }
