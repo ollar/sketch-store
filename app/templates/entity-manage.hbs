@@ -9,27 +9,58 @@
           placeholder=(t 'forms.title.placeholder')}}
     </div>
 
-    {{#unless (eq type 'page')}}
+    {{#if (eq type 'product')}}
+      <div class="pure-control-group">
+        <label for="categories-list">{{t 'forms.categories_list.label'}}</label>
 
+        {{categoryId}}
+
+        <select id="categories-list" onchange={{action 'handleCategoryChange' value="target.value"}}>
+          {{log categoryId}}
+          <option selected={{eq categoryId null}}>{{t 'forms.categories_list.select_category'}}</option>
+          {{#each categories as |category|}}
+            {{log categoryId category.id}}
+            <option value="{{category.id}}" selected={{eq category.id categoryId}}>
+              {{category.title}}
+            </option>
+          {{/each}}
+        </select>
+      </div>
+    {{/if}}
+
+    {{#unless (eq type 'page')}}
       {{image-drop-area
         images=images
         uploadImage=(action 'uploadImage')
         removeImage=(action 'removeImage')}}
-
     {{/unless}}
 
-    {{#each blocks as |block|}}
-      <div class="pure-control-group">
-        {{textarea value=block.content}}
-      </div>
-      <button type="button" {{action 'removeBlock' block}}>
-        {{t 'buttons.remove_block'}}
-      </button>
-    {{/each}}
-
     <div class="pure-control-group">
-      <button type="button" class="pure-button" {{action 'addBlock' type}}>{{t 'buttons.add_block'}}</button>
+      {{#each blocks as |block|}}
+        <div class="pure-control-group">
+          {{textarea value=block.content}}
+        </div>
+        <button type="button" {{action 'removeBlock' block}}>
+          {{t 'buttons.remove_block'}}
+        </button>
+      {{/each}}
+
+      <div class="pure-control-group">
+        <button type="button" class="pure-button" {{action 'addBlock' type}}>{{t 'buttons.add_block'}}</button>
+      </div>
     </div>
+
+    {{#if (eq type 'product')}}
+      <div class="pure-control-group price">
+        <label for="price">{{t 'forms.price.label'}}</label>
+        {{input
+          id="price"
+          type="text"
+          name="price"
+          value=model.price
+          placeholder=(t 'forms.price.placeholder')}}
+      </div>
+    {{/if}}
 
     <div class="pure-controls">
         <button type="submit" class="pure-button pure-button-primary">{{t 'buttons.submit'}}</button>

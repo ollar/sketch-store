@@ -1,20 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // model() {
-  //   return Ember.RSVP.hash({
-  //     product: this.get('store').createRecord('product'),
-  //     categories: this.get('store').findAll('category'),
-  //   });
-  // },
-
   model() {
-    console.log(this)
     return this.get('store').createRecord('product');
   },
 
   renderTemplate(controller, model) {
-    let _controller = this.controllerFor('entity-manage');
+    let _controller = this.controllerFor('product/edit');
 
     _controller.set('type', 'product');
 

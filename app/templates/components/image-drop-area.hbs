@@ -1,5 +1,5 @@
 <div
-    title={{t 'category.drop_image_here'}}
+    title={{t 'messages.drop_image_here'}}
     class="image-drop-area"
     ondragenter={{action 'dragEnter'}}
     ondragover={{action 'dragOver'}}
@@ -14,8 +14,12 @@
             </button>
         </div>
     {{else}}
-        {{t 'no_images_yet'}}
-        {{t 'category.drop_image_here'}}
+        <p>
+            {{t 'messages.empty'}}
+        </p>
+        <p>
+            {{t 'messages.drop_image_here'}}
+        </p>
     {{/each}}
 </div>
 {{yield}}

@@ -17,6 +17,14 @@ export default {
       label: 'Title',
       placeholder: 'Title',
     },
+    categories_list: {
+      label: 'Categories list',
+      select_category: 'Select category',
+    },
+    price: {
+      label: 'Price',
+      placeholder: 'Price',
+    }
   },
 
   buttons: {
@@ -35,6 +43,7 @@ export default {
   },
 
   messages: {
-    empty: 'Nothing here yet'
+    empty: 'Nothing here yet',
+    drop_image_here: 'Drop images here',
   },
 };

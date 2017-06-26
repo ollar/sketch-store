@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   renderTemplate(controller, model) {
-    let _controller = this.controllerFor('entity-manage');
+    let _controller = this.controllerFor('product/edit');
 
     _controller.set('type', 'product');
 
