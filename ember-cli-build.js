@@ -21,6 +21,7 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('bower_components/pure/pure-min.css');
+  app.import('bower_components/tinymce/tinymce.min.js');
 
   return app.toTree();
 };

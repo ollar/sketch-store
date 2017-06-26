@@ -1,7 +1,8 @@
 {
   "name": "sketch-shop",
   "dependencies": {
-    "pure": "^1.0.0"
+    "pure": "^1.0.0",
+    "tinymce": "^4.6.4"
   },
   "homepage": "https://github.com/ollar/sketch-store",
   "authors": [

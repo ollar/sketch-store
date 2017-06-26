@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"co",
+				"catController"
+			],
+			[
+				"image",
+				"imageModel"
+			],
+			[
+				"file",
+				"fileStorage"
+			],
+			[
+				"de",
+				"destroyModel"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
 				"page",
 				"page_id"
 			]
@@ -11,50 +31,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/router.js",
-			"settings":
-			{
-				"buffer_size": 703,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "bower.json",
-			"settings":
-			{
-				"buffer_size": 344,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/locales/en/translations.js",
-			"settings":
-			{
-				"buffer_size": 97,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/templates/page/update.hbs",
-			"settings":
-			{
-				"buffer_size": 84,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/routes/page/update.js",
-			"settings":
-			{
-				"buffer_size": 101,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -64,9 +40,17 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "pro",
+		"last_filter": "pack",
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"snippe\t",
+				"Snippet: Get Elements"
+			],
 			[
 				"pro",
 				"Project: Save As"
@@ -74,10 +58,6 @@
 			[
 				"sett",
 				"Preferences: Settings"
-			],
-			[
-				"pack",
-				"Package Control: Install Package"
 			],
 			[
 				"pac",
@@ -88,7 +68,7 @@
 				"Preferences: Settings"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -110,25 +90,86 @@
 	[
 		"/Users/ollar/Documents/dev/scetch-shop",
 		"/Users/ollar/Documents/dev/scetch-shop/app",
-		"/Users/ollar/Documents/dev/scetch-shop/app/locales",
-		"/Users/ollar/Documents/dev/scetch-shop/app/locales/en",
-		"/Users/ollar/Documents/dev/scetch-shop/app/models",
-		"/Users/ollar/Documents/dev/scetch-shop/app/templates/product"
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers",
+		"/Users/ollar/Documents/dev/scetch-shop/app/helpers",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/product",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates",
+		"/Users/ollar/Documents/dev/scetch-shop/config"
 	],
 	"file_history":
 	[
-		"/Users/ollar/Documents/dev/scetch-shop/app/templates/components/site-header.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/helpers/eq.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/product/edit.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/entity-manage.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/product-create.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/entity-manage.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/category/edit.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/page/edit.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/page-create.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/category-create.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/mixins/block-manage.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/entity/manage.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/product/edit.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/mixins/image-manage.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/product-create.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/product/index.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/category/index.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/page/index.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/services/file-storage.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/page/edit.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/utils/destroy-model.js",
 		"/Users/ollar/Documents/dev/scetch-shop/app/models/block.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/products.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/router.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/product/edit.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/category/edit.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/product/index.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/category/index.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/category-create.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/models/product.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/category/edit.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/categories.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/product-create.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/category-create.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/products.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/components/image-drop-area.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/models/image.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/components/image-drop-area.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/models/category.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/categories.hbs",
 		"/Users/ollar/Documents/dev/scetch-shop/app/models/page.js",
-		"/Users/ollar/Documents/dev/scetch-shop/package.json",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/page-create.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/serializers/page.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/controllers/page/edit.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/page-create.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/pages.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/page/index.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/category.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/components/quick-links.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/application.js",
 		"/Users/ollar/Documents/dev/scetch-shop/app/templates/application.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/initializers/i18n.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/pages.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/locales/en/translations.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/styles/_main.scss",
 		"/Users/ollar/Documents/dev/scetch-shop/app/templates/components/site-footer.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/components/site-header.hbs",
 		"/Users/ollar/Documents/dev/scetch-shop/app/components/site-footer.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/router.js"
+		"/Users/ollar/Documents/dev/scetch-shop/app/components/site-header.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/components/page-block.hbs",
+		"/Users/ollar/Documents/dev/scetch-shop/app/components/page-block.js",
+		"/Users/ollar/Documents/dev/scetch-shop/config/environment.js",
+		"/Users/ollar/Documents/dev/scetch-shop/package.json",
+		"/Users/ollar/Library/Application Support/Sublime Text 3/Packages/User/log.sublime-snippet",
+		"/Users/ollar/Documents/dev/scetch-shop/sketch-shop.sublime-project",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/page/details.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/page/update.js",
+		"/Users/ollar/Documents/dev/scetch-shop/app/templates/page/update.hbs"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -142,6 +183,51 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"product",
+			"function",
+			"catController",
+			"images",
+			"blocks",
+			"category",
+			"entity",
+			"category",
+			"model",
+			"name",
+			"images",
+			"product",
+			"imageModel",
+			"category",
+			"Category",
+			"category",
+			"page",
+			"pages",
+			"snapshot.metadata",
+			"return",
+			"title",
+			"storageRef",
+			"images",
+			"pages",
+			"category",
+			"page",
+			"blocks",
+			"category",
+			"page",
+			"product",
+			"model",
+			"foo",
+			"route",
+			"application",
+			"email",
+			"message",
+			"index",
+			"page",
+			"outlet",
+			"this",
+			"div",
+			"ddiv",
+			"submit",
+			"Submit",
+			"email",
 			"details"
 		],
 		"highlight": true,
@@ -160,167 +246,18 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 703,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								481,
-								481
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "bower.json",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/locales/en/translations.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 97,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/templates/page/update.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 84,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								32,
-								32
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/routes/page/update.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 101,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								92,
-								92
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
@@ -345,6 +282,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -353,7 +294,7 @@
 	"project": "sketch-shop.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -363,16 +304,296 @@
 		"selected_items":
 		[
 			[
+				"tement",
+				"app/templates/entity-manage.hbs"
+			],
+			[
+				"contrman",
+				"app/controllers/entity/manage.js"
+			],
+			[
+				"routcatcr",
+				"app/routes/category-create.js"
+			],
+			[
+				"image",
+				"app/mixins/image-manage.js"
+			],
+			[
+				"routepro",
+				"app/routes/product-create.js"
+			],
+			[
+				"produedi",
+				"app/templates/product/edit.hbs"
+			],
+			[
+				"file",
+				"app/services/file-storage.js"
+			],
+			[
+				"templpa",
+				"app/templates/page/edit.hbs"
+			],
+			[
+				"templpro",
+				"app/templates/product/edit.hbs"
+			],
+			[
+				"modelblo",
+				"app/models/block.js"
+			],
+			[
+				"bloc",
+				"app/mixins/block-manage.js"
+			],
+			[
+				"contrpro",
+				"app/controllers/product-create.js"
+			],
+			[
+				"conproedi",
+				"app/controllers/product/edit.js"
+			],
+			[
+				"router",
+				"app/router.js"
+			],
+			[
+				"model",
+				"app/models/product.js"
+			],
+			[
+				"mixi",
+				"app/mixins/block-manage.js"
+			],
+			[
+				"categedit",
+				"app/templates/category/edit.hbs"
+			],
+			[
+				"catedi",
+				"app/controllers/category/edit.js"
+			],
+			[
+				"tempproed",
+				"app/templates/product/edit.hbs"
+			],
+			[
+				"fil",
+				"app/services/file-storage.js"
+			],
+			[
+				"imagedrop",
+				"app/templates/components/image-drop-area.hbs"
+			],
+			[
+				"tempcated",
+				"app/templates/category/edit.hbs"
+			],
+			[
+				"modelimag",
+				"app/models/image.js"
+			],
+			[
+				"temcated",
+				"app/templates/category/edit.hbs"
+			],
+			[
+				"servfile",
+				"app/services/file-storage.js"
+			],
+			[
+				"modecate",
+				"app/models/category.js"
+			],
+			[
+				"utide",
+				"app/utils/destroy-model.js"
+			],
+			[
+				"mopa",
+				"app/models/page.js"
+			],
+			[
+				"modebloc",
+				"app/models/block.js"
+			],
+			[
+				"modepage",
+				"app/models/page.js"
+			],
+			[
+				"contcated",
+				"app/controllers/category/edit.js"
+			],
+			[
+				"tempagecre",
+				"app/templates/page-create.hbs"
+			],
+			[
+				"route",
+				"app/router.js"
+			],
+			[
+				"pageed",
+				"app/templates/page/edit.hbs"
+			],
+			[
+				"contrcate",
+				"app/controllers/category-create.js"
+			],
+			[
+				"catecre",
+				"app/routes/category-create.js"
+			],
+			[
+				"cate",
+				"app/routes/category-create.js"
+			],
+			[
+				"modecateg",
+				"app/models/category.js"
+			],
+			[
+				"compoqui",
+				"app/components/quick-links.js"
+			],
+			[
+				"templpages",
+				"app/templates/pages.hbs"
+			],
+			[
+				"contredit",
+				"app/controllers/page/edit.js"
+			],
+			[
+				"tempages",
+				"app/templates/pages.hbs"
+			],
+			[
+				"page-cre",
+				"app/controllers/page-create.js"
+			],
+			[
+				"templapage",
+				"app/templates/page/index.hbs"
+			],
+			[
+				"tempage",
+				"app/templates/pages.hbs"
+			],
+			[
+				"app",
+				"app/templates/application.hbs"
+			],
+			[
+				"routa",
+				"app/routes/application.js"
+			],
+			[
+				"init",
+				"app/initializers/i18n.js"
+			],
+			[
+				"modelpa",
+				"app/models/page.js"
+			],
+			[
+				"ageedit",
+				"app/controllers/page/edit.js"
+			],
+			[
+				"templpage",
+				"app/templates/page/edit.hbs"
+			],
+			[
+				"contrpa",
+				"app/controllers/page/index.js"
+			],
+			[
+				"tra",
+				"app/locales/en/translations.js"
+			],
+			[
+				"routepages",
+				"app/routes/pages.js"
+			],
+			[
+				"pageinde",
+				"app/controllers/page/index.js"
+			],
+			[
+				"templheader",
+				"app/templates/components/site-header.hbs"
+			],
+			[
+				"templfoo",
+				"app/templates/components/site-footer.hbs"
+			],
+			[
+				"temsite",
+				"app/templates/components/site-footer.hbs"
+			],
+			[
+				"composite",
+				"app/components/site-header.js"
+			],
+			[
+				"templsitehe",
+				"app/templates/components/site-header.hbs"
+			],
+			[
+				"templs",
+				"app/templates/components/site-footer.hbs"
+			],
+			[
+				"comp",
+				"app/components/site-footer.js"
+			],
+			[
+				"pageindex",
+				"app/controllers/page/index.js"
+			],
+			[
+				"mode",
+				"app/models/page.js"
+			],
+			[
+				"compopage",
+				"app/templates/components/page-block.hbs"
+			],
+			[
+				"compo",
+				"app/components/page-block.js"
+			],
+			[
+				"contpage",
+				"app/controllers/page-create.js"
+			],
+			[
+				"modelpage",
+				"app/models/page.js"
+			],
+			[
+				"loca",
+				"app/locales/en/translations.js"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"routepa",
+				"app/routes/page/details.js"
+			],
+			[
 				"pageup",
 				"app/routes/page/update.js"
 			],
 			[
 				"header",
 				"app/templates/components/site-header.hbs"
-			],
-			[
-				"pack",
-				"package.json"
 			],
 			[
 				"temappl",
