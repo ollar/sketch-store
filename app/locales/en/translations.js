@@ -2,6 +2,7 @@ export default {
   test: {
     header: 'HEADER',
     footer: 'FOOTER',
+    admin_menu: 'admin menu',
   },
 
   pages: {
@@ -33,6 +34,7 @@ export default {
 
   buttons: {
     submit: 'Submit',
+    cancel: 'Cancel',
     add_block: 'Add block',
     remove_block: 'Remove block',
     remove_page: 'Remove page',
@@ -47,6 +49,9 @@ export default {
     page_edit: 'Edit page',
     category_edit: 'Edit category',
     product_edit: 'Edit product',
+    categories: 'Categories',
+    products: 'Products',
+    pages: 'Pages',
   },
 
   messages: {
