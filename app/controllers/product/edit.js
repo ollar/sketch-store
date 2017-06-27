@@ -7,15 +7,7 @@ export default EntityManagerConrtroller.extend({
     this.set('categories', this.get('store').findAll('category'));
   },
 
-  categoryId: Ember.computed('model.category', function() {
-    return this.get('model').get('category').then((cat) => {
-      console.log('meou', cat);
-    });
-  }),
-
-  category: Ember.computed.alias('model.category'),
-
-  // categoryId: '-KnT2rL8SgTZBsmlug0y',
+  categoryId: Ember.computed.readOnly('model.category.id'),
 
   actions: {
     handleCategoryChange(categoryId) {
