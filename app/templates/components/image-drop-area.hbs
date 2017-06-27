@@ -8,7 +8,7 @@
 >
     {{#each images as |image|}}
         <div>
-            <img src="{{image.url}}" alt="">
+            <img src="{{image.url}}" class="pure-img" alt="">
             <button {{action 'removeImage' image}}>
                 remove
             </button>
