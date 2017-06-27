@@ -12,6 +12,10 @@ export default Ember.Controller.extend({
         });
       }
 
+      if (this.get('model.category')) {
+        this.get('model.category.products').removeObject(this.get('model'));
+      }
+
       destroyModel(this.get('model'), ['blocks', 'images'])
         .then(() => {
           this.send('notify', {

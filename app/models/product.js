@@ -5,7 +5,7 @@ export default DS.Model.extend({
   blocks: DS.hasMany('block'),
   images: DS.hasMany('image'),
   price: DS.attr('number'),
-  category: DS.belongsTo('category', { async:true, inverse: null }),
+  category: DS.belongsTo('category', { inverse: null }),
   dateCreated: DS.attr('date'),
   modified: DS.attr('date'),
 });
