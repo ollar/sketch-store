@@ -23,9 +23,7 @@
 
     PRODUCTS
     {{#each model.products as |product|}}
-        <div>
-            {{product.title}}
-        </div>
+        {{product-block product=product}}
     {{else}}
         {{t 'messages.empty'}}
     {{/each}}

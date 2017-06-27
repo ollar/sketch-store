@@ -15,6 +15,7 @@ export default {
 
   products: {
     title: 'Products',
+    price_label: 'Price:'
   },
 
   forms: {

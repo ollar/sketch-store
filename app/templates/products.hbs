@@ -8,9 +8,11 @@
 
 <ol>
   {{#each model as |product|}}
-    <li>
+    {{!-- <li>
       {{link-to product.title 'product' product}}
-    </li>
+    </li> --}}
+
+    {{product-block product=product}}
   {{else}}
     {{t 'messages.empty'}}
   {{/each}}

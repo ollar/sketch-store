@@ -1,0 +1,19 @@
+<h3>
+  {{product.title}}
+</h3>
+
+<div class="images-wrapper" style="width: 300px; height: 200px;">
+  <div class="swapper-wrapper">
+    {{#each product.images as |image|}}
+      <div class="swiper-slide">
+        <img src="{{image.url}}" class="pure-img swiper-slide" alt="">
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+{{yield}}
+
+<div class="price-wrapper">
+  {{t 'products.price_label'}} {{price product.price}}
+</div>
