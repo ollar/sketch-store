@@ -12,6 +12,10 @@ export default {
     title: 'List of all categories here'
   },
 
+  products: {
+    title: 'Products',
+  },
+
   forms: {
     title: {
       label: 'Title',
@@ -33,17 +37,23 @@ export default {
     remove_block: 'Remove block',
     remove_page: 'Remove page',
     remove_category: 'Remove category',
+    remove_product: 'Remove product',
   },
 
   links: {
     create_category: 'Create category',
     create_page: 'Create page',
+    create_product: 'Create product',
     page_edit: 'Edit page',
     category_edit: 'Edit category',
+    product_edit: 'Edit product',
   },
 
   messages: {
     empty: 'Nothing here yet',
     drop_image_here: 'Drop images here',
+    category_create_success: 'Category created',
+    page_create_success: 'Page created',
+    product_create_success: 'Product created',
   },
 };

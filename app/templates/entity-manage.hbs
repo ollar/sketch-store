@@ -9,13 +9,11 @@
           placeholder=(t 'forms.title.placeholder')}}
     </div>
 
-    {{log categoryId}}
-
     {{#if (eq type 'product')}}
       <div class="pure-control-group">
         <label for="categories-list">{{t 'forms.categories_list.label'}}</label>
         <select id="categories-list" onchange={{action 'handleCategoryChange' value="target.value"}}>
-          <option selected={{eq categoryId null}}>{{t 'forms.categories_list.select_category'}}</option>
+          <option selected={{eq categoryId null}} value="">{{t 'forms.categories_list.select_category'}}</option>
           {{#each categories as |category|}}
             <option value={{category.id}} selected={{eq category.id categoryId}}>
               {{category.title}}

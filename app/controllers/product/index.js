@@ -12,8 +12,10 @@ export default Ember.Controller.extend({
         });
       }
 
-      if (this.get('model.category')) {
-        this.get('model.category.products').removeObject(this.get('model'));
+      if (this.get('model.category.content')) {
+        let category = this.get('store').peekRecord('category', this.get('model.category.id'));
+        category.get('products').removeObject(this.get('model'));
+        category.save();
       }
 
       destroyModel(this.get('model'), ['blocks', 'images'])

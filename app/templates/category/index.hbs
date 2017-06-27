@@ -21,9 +21,10 @@
         {{page-block block=block}}
     {{/each}}
 
+    PRODUCTS
     {{#each model.products as |product|}}
         <div>
-            aaa
+            {{product.title}}
         </div>
     {{else}}
         {{t 'messages.empty'}}
