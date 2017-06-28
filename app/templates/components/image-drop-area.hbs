@@ -7,7 +7,7 @@
     ondrop={{action 'drop'}}
 >
     {{#each images as |image|}}
-        <div>
+        <div class="image-wrapper">
             <img src="{{image.url}}" class="pure-img" alt="">
             <button {{action 'removeImage' image}}>
                 remove

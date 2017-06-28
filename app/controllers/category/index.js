@@ -12,6 +12,13 @@ export default Ember.Controller.extend({
         });
       }
 
+      if (this.get('model.products.content')) {
+        this.get('model.products').toArray().forEach((product) => {
+          product.set('category', null);
+          product.save();
+        });
+      }
+
       destroyModel(this.get('model'), ['images', 'blocks'])
         .then(() => {
           this.send('notify', {

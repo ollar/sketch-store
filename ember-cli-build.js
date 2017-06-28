@@ -4,7 +4,11 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
-    sassOptions: {}
+    sassOptions: {},
+    autoprefixer: {
+      browsers: ['last 2 ios version'],
+      cascade: false
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -21,9 +25,9 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('bower_components/pure/pure-min.css');
-  app.import('bower_components/tinymce/tinymce.min.js');
-  app.import('bower_components/swiper/dist/js/swiper.min.js');
   app.import('bower_components/swiper/dist/css/swiper.min.css');
+  app.import('bower_components/tinymce/tinymce.min.js');
+  app.import('bower_components/swiper/dist/js/swiper.jquery.min.js');
 
 
   return app.toTree();

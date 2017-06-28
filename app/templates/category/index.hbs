@@ -11,17 +11,19 @@
 {{/quick-links}}
 
 <div class="page-content">
-    {{#each model.images as |image|}}
-        <div class="image">
-            <img src="{{image.url}}" class="pure-img" alt="">
-        </div>
-    {{/each}}
+    {{#swiper-container}}
+        {{#each model.images as |image|}}
+            <div class="swiper-slide">
+                <img src="{{image.url}}" class="pure-img" alt="">
+            </div>
+        {{/each}}
+    {{/swiper-container}}
 
     {{#each model.blocks as |block|}}
         {{page-block block=block}}
     {{/each}}
 
-    PRODUCTS
+    <h2>{{t 'category.products'}}</h2>
     {{#each model.products as |product|}}
         {{product-block product=product}}
     {{else}}

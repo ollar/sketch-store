@@ -11,11 +11,13 @@
 {{/quick-links}}
 
 <div class="page-content">
-    {{#each model.images as |image|}}
-        <div class="image">
-            <img src="{{image.url}}" alt="">
-        </div>
-    {{/each}}
+    {{#swiper-container class="images-wrapper"}}
+        {{#each model.images as |image|}}
+            <div class="swiper-slide">
+                <img src="{{image.url}}" class="pure-img" alt="">
+            </div>
+        {{/each}}
+    {{/swiper-container}}
 
     {{t 'products.price'}} {{model.price}}
 

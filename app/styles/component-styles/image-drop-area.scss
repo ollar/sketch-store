@@ -1,0 +1,46 @@
+.image-drop-area {
+  min-height: 100px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border: 1px solid darken(#f2f2f2, 10%);
+  margin: 1em 0;
+  text-align: center;
+
+  p {
+    color: darken(#f2f2f2, 20%);
+    font-size: 0.85em;
+  }
+
+  .image-wrapper{
+    margin-bottom: 1em;
+    position: relative;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    button {
+      width: 10px;
+      height: 20px;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background-color: #f00;
+      appearance: none;
+      border: none;
+      overflow: hidden;
+      text-indent: 100px;
+
+      &:after{
+        content: 'X';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,16 +1,16 @@
 <h3>
-  {{product.title}}
+  {{link-to product.title 'product' product.id}}
 </h3>
 
-<div class="images-wrapper" style="width: 300px; height: 200px;">
-  <div class="swapper-wrapper">
-    {{#each product.images as |image|}}
-      <div class="swiper-slide">
-        <img src="{{image.url}}" class="pure-img swiper-slide" alt="">
-      </div>
-    {{/each}}
-  </div>
-</div>
+{{#swiper-container class="images-wrapper"}}
+  {{#each product.images as |image|}}
+    <div class="swiper-slide">
+      {{#link-to 'product' product.id}}
+      <img src="{{image.url}}" class="pure-img" alt="">
+      {{/link-to}}
+    </div>
+  {{/each}}
+{{/swiper-container}}
 
 {{yield}}
 

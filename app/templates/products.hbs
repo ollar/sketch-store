@@ -6,14 +6,10 @@
   {{link-to (t 'links.create_product') 'product-create'}}
 {{/quick-links}}
 
-<ol>
+<div class="products-list">
   {{#each model as |product|}}
-    {{!-- <li>
-      {{link-to product.title 'product' product}}
-    </li> --}}
-
     {{product-block product=product}}
   {{else}}
     {{t 'messages.empty'}}
   {{/each}}
-</ol>
+</div>
