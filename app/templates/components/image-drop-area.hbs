@@ -9,9 +9,11 @@
     {{#each images as |image|}}
         <div class="image-wrapper">
             <img src="{{image.url}}" class="pure-img" alt="">
-            <button {{action 'removeImage' image}}>
-                remove
-            </button>
+            <div class="button-wrapper">
+                <button {{action 'removeImage' image}} class="remove">
+                    {{t 'buttons.remove'}}
+                </button>
+            </div>
         </div>
     {{else}}
         <p>
