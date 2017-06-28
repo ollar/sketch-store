@@ -1,0 +1,8 @@
+<div class="pure-control-group">
+  {{textarea class="mce-editor" value=block.content}}
+</div>
+<button type="button" {{action 'removeBlock'}}>
+  {{t 'buttons.remove_block'}}
+</button>
+
+{{yield}}

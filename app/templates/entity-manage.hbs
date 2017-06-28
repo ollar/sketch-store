@@ -32,12 +32,7 @@
 
     <div class="pure-control-group">
       {{#each blocks as |block|}}
-        <div class="pure-control-group">
-          {{textarea value=block.content}}
-        </div>
-        <button type="button" {{action 'removeBlock' block}}>
-          {{t 'buttons.remove_block'}}
-        </button>
+        {{text-block removeBlock=(action 'removeBlock' block) block=block}}
       {{/each}}
 
       <div class="pure-control-group">
