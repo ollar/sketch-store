@@ -1,3 +1,11 @@
+{{#swiper-container}}
+    {{#each model.images as |image|}}
+        <div class="swiper-slide">
+            <img src="{{image.url}}" class="pure-img" alt="">
+        </div>
+    {{/each}}
+{{/swiper-container}}
+
 <h1>
     {{model.title}}
 </h1>
@@ -8,22 +16,18 @@
     remove=(action 'removeCategory')}}
 
 <div class="page-content">
-    {{#swiper-container}}
-        {{#each model.images as |image|}}
-            <div class="swiper-slide">
-                <img src="{{image.url}}" class="pure-img" alt="">
-            </div>
-        {{/each}}
-    {{/swiper-container}}
-
     {{#each model.blocks as |block|}}
         {{page-block block=block}}
     {{/each}}
 
-    <h2>{{t 'category.products'}}</h2>
-    {{#each model.products as |product|}}
-        {{product-block product=product}}
-    {{else}}
-        {{t 'messages.empty'}}
-    {{/each}}
+    {{#if model.products}}
+    <div class="category-products">
+        <h2>{{t 'category.products'}}</h2>
+        {{#each model.products as |product|}}
+            {{product-block product=product}}
+        {{else}}
+            {{t 'messages.empty'}}
+        {{/each}}
+    </div>
+    {{/if}}
 </div>

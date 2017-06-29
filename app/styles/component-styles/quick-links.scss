@@ -1,5 +1,9 @@
 & {
   font-size: 0.85em;
-  text-align: right;
   margin: 1em 0;
+
+  & > *{
+    margin-right: 2em;
+    display: inline-block;
+  }
 }
