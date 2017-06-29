@@ -10,19 +10,31 @@ export default EntityManagerConrtroller.extend({
   categoryId: Ember.computed.readOnly('model.category.id'),
   category: Ember.computed.readOnly('model.category'),
 
+  newCategoryId: null,
+
   actions: {
     handleCategoryChange(categoryId) {
+      this.set('newCategoryId', categoryId);
+    },
+
+    handleSubmit() {
       if (this.get('category.content')) {
         let category = this.get('store').peekRecord('category', this.get('categoryId'));
         category.get('products').removeObject(this.model);
         category.save();
       }
 
-      this.get('store').findRecord('category', categoryId).then((category) => {
+      if (this.get('newCategoryId')) {
+        let category = this.get('store').peekRecord('category', this.get('newCategoryId')); //.then((category) => {
         this.get('model').set('category', category);
+
+        category.get('products').pushObject(this.get('model'));
         category.save();
-        return this.get('model').save();
-      });
-    },
-  }
+
+        return this._super(...arguments);
+      } else {
+        return this._super(...arguments);
+      }
+    }
+  },
 });
