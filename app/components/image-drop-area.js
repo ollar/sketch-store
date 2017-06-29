@@ -1,8 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNameBindings: ['dragover'],
+  classNameBindings: ['dragover', 'isEmpty'],
   draddover: false,
+
+  isEmpty: true,
+
+  didRender() {
+    if (this.get('images.length')) {
+      this.set('isEmpty', false);
+    } else {
+      this.set('isEmpty', true);
+    }
+  },
 
   actions: {
     dragEnter(e) {

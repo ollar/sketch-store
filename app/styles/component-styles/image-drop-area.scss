@@ -1,20 +1,39 @@
+& {
+  margin: 1em 0;
+}
+
+&.is-empty {
+  display: table;
+  width: 100%;
+
+  .image-drop-area {
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
 .image-drop-area {
-  min-height: 100px;
   background-color: #f2f2f2;
   border-radius: 5px;
   border: 1px solid darken(#f2f2f2, 10%);
-  margin: 1em 0;
   text-align: center;
+  padding: 1em;
 
   p {
     color: darken(#f2f2f2, 20%);
     font-size: 0.85em;
+    margin: 0;
   }
 
   .image-wrapper{
     margin-bottom: 1em;
     position: relative;
     text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     .pure-img {
       display: inline-block;
