@@ -4,8 +4,7 @@ export default Ember.Component.extend({
   didInsertElement() {
     this._super(...arguments);
     tinymce.init({
-      selector: '.mce-editor',
-      inline: true
+      selector: this.$('.mce-editor'),
     });
   },
   actions: {
