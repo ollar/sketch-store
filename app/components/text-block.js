@@ -1,10 +1,11 @@
 import Ember from 'ember';
+import tinymce from 'tinymce';
 
 export default Ember.Component.extend({
   didInsertElement() {
     this._super(...arguments);
     tinymce.init({
-      selector: this.$('.mce-editor'),
+      selector: '.mce-editor',
     });
   },
   actions: {

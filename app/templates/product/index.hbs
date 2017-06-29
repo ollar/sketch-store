@@ -2,13 +2,10 @@
     {{model.title}}
 </h1>
 
-{{#quick-links}}
-    {{link-to (t 'links.product_edit') 'product.edit' model}}
-
-    <button type="button" {{action 'removeProduct'}}  class="remove">
-        {{t 'buttons.remove_product'}}
-    </button>
-{{/quick-links}}
+{{quick-links
+    type='product'
+    model=model
+    remove=(action 'removeProduct')}}
 
 <div class="page-content">
     {{#swiper-container class="images-wrapper"}}

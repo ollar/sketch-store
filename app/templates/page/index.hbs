@@ -2,12 +2,10 @@
   {{model.title}}
 </h1>
 
-{{#quick-links}}
-  {{link-to (t 'links.page_edit') 'page.edit' model}}
-  <button type="button" {{action 'removePage'}} class="remove">
-    {{t 'buttons.remove_page'}}
-  </button>
-{{/quick-links}}
+{{quick-links
+    type='page'
+    model=model
+    remove=(action 'removePage')}}
 
 <div class="page-content">
   {{#each model.blocks as |block|}}

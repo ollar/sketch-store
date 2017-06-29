@@ -1,1 +1,8 @@
 {{yield}}
+
+{{#if type}}
+{{link-to (t (concat 'links.' type '_edit')) (concat type '.edit') model}}
+<button type="button" {{action 'remove'}} class="pure-button remove">
+    {{t (concat 'buttons.remove_' type)}}
+</button>
+{{/if}}

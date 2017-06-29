@@ -26,9 +26,7 @@ module.exports = function(defaults) {
 
   app.import('bower_components/pure/pure-min.css');
   app.import('bower_components/swiper/dist/css/swiper.min.css');
-  app.import('bower_components/tinymce/tinymce.min.js');
   app.import('bower_components/swiper/dist/js/swiper.jquery.min.js');
-
 
   return app.toTree();
 };

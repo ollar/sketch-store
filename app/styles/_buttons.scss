@@ -8,7 +8,7 @@ button {
     border: 1px solid darken($base, 20%);
     background-image: linear-gradient($base, darken($base, 10%));
     box-shadow: inset 0 2px 0 -1px lighten($base, 15%);
-    text-shadow: 1px 1px 0 darken($base, 20%);
+    text-shadow: 1px 1px 0 lighten($base, 20%);
     color: darken($base, 80%);
 
     &:hover {
@@ -44,8 +44,22 @@ button {
   }
 
   &.remove {
-    background-color: #f00;
-    border: none;
-    color: #fff;
+    background-color: $expressive;
+    border: 1px solid darken($expressive, 20%);
+    background-image: linear-gradient($expressive, darken($expressive, 10%));
+    box-shadow: inset 0 2px 0 -1px lighten($expressive, 15%);
+    text-shadow: 1px 1px 0 darken($expressive, 20%);
+    color: lighten($expressive, 60%);
+
+    &:hover {
+      background-image: linear-gradient(darken($expressive, 10%), $expressive);
+      box-shadow: inset 0 2px 0 -1px $expressive;
+    }
+
+    &:active {
+      background-image: linear-gradient(darken($expressive, 20%), darken($expressive, 10%));
+      box-shadow: inset 0 2px 0 -1px darken($expressive, 25%);
+      box-shadow: none;
+    }
   }
 }
