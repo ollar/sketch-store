@@ -1,25 +1,33 @@
-{{#swiper-container class="images-wrapper"}}
-    {{#each model.images as |image|}}
-        <div class="swiper-slide">
-            <img src="{{image.url}}" class="pure-img" alt="">
-        </div>
-    {{/each}}
-{{/swiper-container}}
+{{#if model.images}}
+    {{#swiper-container class="images-wrapper full-width"
+        options=(hash
+            autoplay=5000
+            freeMode=true
+        )}}
+        {{#each model.images as |image|}}
+            <div class="swiper-slide">
+                <img src="{{image.url}}" alt="">
+            </div>
+        {{/each}}
+    {{/swiper-container}}
+{{/if}}
 
-<h1>
-    {{model.title}}
-</h1>
+<div class="center-wrapper content-wrapper product-page">
+    <h1>
+        {{model.title}}
+    </h1>
 
-{{quick-links
-    type='product'
-    model=model
-    remove=(action 'removeProduct')}}
+    {{quick-links
+        type='product'
+        model=model
+        remove=(action 'removeProduct')}}
 
-<div class="page-content">
+    <div class="page-content">
 
-    {{t 'products.price'}} {{model.price}}
+        {{t 'products.price'}} {{model.price}}
 
-    {{#each model.blocks as |block|}}
-        {{page-block block=block}}
-    {{/each}}
+        {{#each model.blocks as |block|}}
+            {{page-block block=block}}
+        {{/each}}
+    </div>
 </div>

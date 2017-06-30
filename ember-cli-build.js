@@ -27,6 +27,9 @@ module.exports = function(defaults) {
   app.import('bower_components/pure/pure-min.css');
   app.import('bower_components/swiper/dist/css/swiper.min.css');
   app.import('bower_components/swiper/dist/js/swiper.jquery.min.js');
+  app.import('bower_components/showdown/dist/showdown.min.js', {
+    exports: 'showdown',
+  });
 
   return app.toTree();
 };

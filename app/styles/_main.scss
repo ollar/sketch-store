@@ -42,3 +42,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin-top: 0;
 }
+
+// =============================================================================
+
+.content-wrapper{
+  margin-top: 40px;
+}
+
+// =============================================================================
+
+.images-wrapper {
+  &.full-width {
+    max-height:  500px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+}
