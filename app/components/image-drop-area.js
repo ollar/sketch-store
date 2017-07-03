@@ -22,6 +22,7 @@ export default Ember.Component.extend({
 
     dragOver(e) {
       e.preventDefault();
+      this.set('dragover', true);
     },
 
     dragLeave() {

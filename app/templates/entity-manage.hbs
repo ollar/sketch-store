@@ -1,5 +1,5 @@
 <div class="center-wrapper content-wrapper">
-  <form class="pure-form pure-form-aligned" {{action 'handleSubmit' on='submit'}}>
+  <form class="pure-form pure-form-stacked" {{action 'handleSubmit' on='submit'}}>
       <div class="pure-control-group">
           <label for="title">{{t 'forms.title.label'}}</label>
           {{input
@@ -31,19 +31,22 @@
           removeImage=(action 'removeImage')}}
       {{/unless}}
 
-      <div class="pure-control-group">
-        {{#each blocks as |block|}}
-          {{block-manager
-            removeBlock=(action 'removeBlock' block)
-            uploadImage=(action 'uploadImage')
-            removeImage=(action 'removeImage')
-            block=block}}
-        {{/each}}
-
+      <fieldset>
+        <legend>{{t 'forms.fieldset.blocks'}}</legend>
         <div class="pure-control-group">
-          <button type="button" class="pure-button" {{action 'addBlock' type}}>{{t 'buttons.add_block'}}</button>
+          {{#each blocks as |block|}}
+            {{block-manager
+              removeBlock=(action 'removeBlock' block)
+              uploadImage=(action 'uploadImage')
+              removeImage=(action 'removeImage')
+              block=block}}
+          {{/each}}
+
+          <div class="pure-control-group">
+            <button type="button" class="pure-button full-width" {{action 'addBlock' type}}>{{t 'buttons.add_block'}}</button>
+          </div>
         </div>
-      </div>
+      </fieldset>
 
       {{#if (eq type 'product')}}
         <div class="pure-control-group price">

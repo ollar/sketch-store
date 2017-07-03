@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ['block-manager'],
+  classNameBindings: ['type'],
+
   type: Ember.computed.alias('block.type'),
   fileStorage: Ember.inject.service(),
 

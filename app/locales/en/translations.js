@@ -30,6 +30,9 @@ export default {
     price: {
       label: 'Price',
       placeholder: 'Price',
+    },
+    fieldset: {
+      blocks: 'Blocks',
     }
   },
 
@@ -37,6 +40,7 @@ export default {
     submit: 'Submit',
     cancel: 'Cancel',
     add_block: 'Add block',
+    remove: 'Remove',
     remove_block: 'Remove block',
     remove_page: 'Remove page',
     remove_category: 'Remove category',
@@ -61,5 +65,15 @@ export default {
     category_create_success: 'Category created',
     page_create_success: 'Page created',
     product_create_success: 'Product created',
+  },
+
+  block_manage: {
+    type: {
+      select_type: 'Select type',
+      text: 'Text',
+      image: 'Image',
+      parallax_image: 'Parallax',
+      quote: 'Quote',
+    },
   },
 };

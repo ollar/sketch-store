@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .content-wrapper{
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 // =============================================================================
@@ -70,4 +71,12 @@ h1, h2, h3, h4, h5, h6 {
 textarea.editor {
   width: 100%;
   height: 200px;
+}
+
+.block-manager {
+  margin: modular-scale(1) 0;
+
+  .pure-control-group {
+    margin: modular-scale(-1) 0;
+  }
 }

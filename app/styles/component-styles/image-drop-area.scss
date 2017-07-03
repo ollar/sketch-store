@@ -13,6 +13,12 @@
   }
 }
 
+&.dragover {
+  .image-drop-area {
+    background-image: linear-gradient(darken(#f2f2f2, 10%), #f2f2f2);
+  }
+}
+
 .image-drop-area {
   background-color: #f2f2f2;
   border-radius: 5px;

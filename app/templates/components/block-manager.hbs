@@ -1,11 +1,13 @@
 {{#unless type}}
-<select onchange={{action 'handleTypeChange' value='target.value'}}>
-  <option value="">{{t 'block_manage.type.select_type'}}</option>
-  <option value="text">{{t 'block_manage.type.text'}}</option>
-  <option value="image">{{t 'block_manage.type.image'}}</option>
-  <option value="parallax_image">{{t 'block_manage.type.parallax_image'}}</option>
-  <option value="quote">{{t 'block_manage.type.quote'}}</option>
-</select>
+<div class="pure-control-group">
+  <select onchange={{action 'handleTypeChange' value='target.value'}}>
+    <option value="">{{t 'block_manage.type.select_type'}}</option>
+    <option value="text">{{t 'block_manage.type.text'}}</option>
+    <option value="image">{{t 'block_manage.type.image'}}</option>
+    <option value="parallax_image">{{t 'block_manage.type.parallax_image'}}</option>
+    <option value="quote">{{t 'block_manage.type.quote'}}</option>
+  </select>
+</div>
 {{/unless}}
 
 {{#if (eq type 'text')}}
@@ -22,8 +24,7 @@
       removeImage=(action 'removeImage')}}
   </div>
 {{/if}}
-{{type}}
-
-<button type="button" {{action 'removeBlock'}}>
+{{!-- {{type}} --}}
+<button type="button" class="pure-button remove" {{action 'removeBlock'}}>
   {{t 'buttons.remove_block'}}
 </button>
