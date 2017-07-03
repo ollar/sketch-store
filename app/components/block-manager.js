@@ -7,7 +7,10 @@ export default Ember.Component.extend({
   images: Ember.computed(function() {
     if (this.get('block.type') === 'image' && this.get('block.content')) {
       return [
-        { url: this.get('block.content') },
+        {
+          url: this.get('block.content.url'),
+          fullPath: this.get('block.content.fullPath'),
+        },
       ];
     }
     return [];
@@ -37,17 +40,11 @@ export default Ember.Component.extend({
     },
 
     removeImage(image) {
-      console.log(this.get('block.content'));
-
-      console.log(image);
-
-      if (this.get('block.content')) {
-        // this.get('fileStorage').remove(null);
+      if (this.get('block.content.fullPath')) {
+        this.get('fileStorage').remove(null, this.get('block.content.fullPath'));
       }
 
       this.get('images').removeObject(image);
-
-
       this.set('block.file', null);
       this.set('block.content', '');
     },

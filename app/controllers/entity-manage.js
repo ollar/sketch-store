@@ -22,7 +22,10 @@ export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin, {
             if (!file) return;
             this.get('fileStorage').upload(`block/${block.id}/${file.name}`, file)
             .then((imageData) => {
-              block.set('content', imageData.downloadURLs[0]);
+              block.set('content', {
+                url: imageData.downloadURLs[0],
+                fullPath: imageData.fullPath,
+              });
               block.save();
             });
           } else {

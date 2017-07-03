@@ -7,7 +7,7 @@ export default DS.Model.extend({
     this.addObserver('content.textSource', this, 'handleTextSourceChange');
   },
   type: DS.attr('string'),
-  content: DS.attr({ defaultValue: () => {} }),
+  content: DS.attr({ defaultValue: function() { return {}; } }),
   page: DS.belongsTo('page'),
   category: DS.belongsTo('category'),
   product: DS.belongsTo('product'),

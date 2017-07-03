@@ -1,17 +1,19 @@
-<h1>
-  {{t 'categories.title'}}
-</h1>
+<div class="center-wrapper content-wrapper">
+  <h1>
+    {{t 'categories.title'}}
+  </h1>
 
-{{#quick-links}}
-  {{link-to (t 'links.create_category') 'category-create'}}
-{{/quick-links}}
+  {{#quick-links}}
+    {{link-to (t 'links.create_category') 'category-create'}}
+  {{/quick-links}}
 
-<ol>
-  {{#each model as |category|}}
-    <li>
-      {{link-to category.title 'category' category}}
-    </li>
-  {{else}}
-    {{t 'messages.empty'}}
-  {{/each}}
-</ol>
+  <ol>
+    {{#each model as |category|}}
+      <li>
+        {{link-to category.title 'category' category}}
+      </li>
+    {{else}}
+      {{t 'messages.empty'}}
+    {{/each}}
+  </ol>
+</div>
