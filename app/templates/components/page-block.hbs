@@ -1,10 +1,10 @@
 {{#if (eq type 'text')}}
   <p class="page-block">
-    {{{block.content}}}
+    {{{block.content.text}}}
   </p>
 {{/if}}
 
 {{#if (eq type 'image')}}
-  <img src="{{block.content}}">
+  <img src="{{block.content}}" class="pure-img">
 {{/if}}
 {{yield}}

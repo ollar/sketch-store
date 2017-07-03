@@ -19,6 +19,7 @@ export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin, {
 
           if (block.get('type') === 'image') {
             const file = block.get('file');
+            if (!file) return;
             this.get('fileStorage').upload(`block/${block.id}/${file.name}`, file)
             .then((imageData) => {
               block.set('content', imageData.downloadURLs[0]);

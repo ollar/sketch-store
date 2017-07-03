@@ -39,8 +39,10 @@ export default Ember.Component.extend({
     removeImage(image) {
       console.log(this.get('block.content'));
 
+      console.log(image);
+
       if (this.get('block.content')) {
-        this.get('fileStorage').remove(imageModel);
+        // this.get('fileStorage').remove(null);
       }
 
       this.get('images').removeObject(image);
