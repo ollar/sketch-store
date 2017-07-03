@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   classNameBindings: ['dragover', 'isEmpty'],
-  draddover: false,
+  dragover: false,
 
   isEmpty: true,
 
@@ -24,7 +24,7 @@ export default Ember.Component.extend({
       e.preventDefault();
     },
 
-    dragLeave(e) {
+    dragLeave() {
       this.set('dragover', false);
     },
 
@@ -33,13 +33,11 @@ export default Ember.Component.extend({
       this.set('dragover', false);
       const files = Array.prototype.slice.call(e.dataTransfer.files);
 
-      files.forEach((file) => {
-        this.uploadImage(file);
-      });
+      this.sendAction('uploadImage', files)
     },
 
     removeImage(imageModel) {
-      return this.removeImage(imageModel);
+      this.sendAction('removeImage', imageModel);
     }
   },
 });

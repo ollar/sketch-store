@@ -4,7 +4,7 @@ const BlockManageMixin = Ember.Mixin.create({
   actions: {
     addBlock(blockType) {
       const block = this.get('store').createRecord('block', {
-        type: 'text',
+        type: '',
         [blockType]: this.get('model'),
       });
 

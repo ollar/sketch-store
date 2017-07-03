@@ -1,59 +1,65 @@
-<form class="pure-form pure-form-aligned" {{action 'handleSubmit' on='submit'}}>
-    <div class="pure-control-group">
-        <label for="title">{{t 'forms.title.label'}}</label>
-        {{input
-          id="title"
-          type="text"
-          name="title"
-          value=model.title
-          placeholder=(t 'forms.title.placeholder')}}
-    </div>
-
-    {{#if (eq type 'product')}}
+<div class="center-wrapper">
+  <form class="pure-form pure-form-aligned" {{action 'handleSubmit' on='submit'}}>
       <div class="pure-control-group">
-        <label for="categories-list">{{t 'forms.categories_list.label'}}</label>
-        <select id="categories-list" onchange={{action 'handleCategoryChange' value="target.value"}}>
-          <option selected={{eq categoryId null}} value="">{{t 'forms.categories_list.select_category'}}</option>
-          {{#each categories as |category|}}
-            <option value={{category.id}} selected={{eq category.id categoryId}}>
-              {{category.title}}
-            </option>
-          {{/each}}
-        </select>
+          <label for="title">{{t 'forms.title.label'}}</label>
+          {{input
+            id="title"
+            type="text"
+            name="title"
+            value=model.title
+            placeholder=(t 'forms.title.placeholder')}}
       </div>
-    {{/if}}
 
-    {{#unless (eq type 'page')}}
-      {{image-drop-area
-        images=images
-        uploadImage=(action 'uploadImage')
-        removeImage=(action 'removeImage')}}
-    {{/unless}}
+      {{#if (eq type 'product')}}
+        <div class="pure-control-group">
+          <label for="categories-list">{{t 'forms.categories_list.label'}}</label>
+          <select id="categories-list" onchange={{action 'handleCategoryChange' value="target.value"}}>
+            <option selected={{eq categoryId null}} value="">{{t 'forms.categories_list.select_category'}}</option>
+            {{#each categories as |category|}}
+              <option value={{category.id}} selected={{eq category.id categoryId}}>
+                {{category.title}}
+              </option>
+            {{/each}}
+          </select>
+        </div>
+      {{/if}}
 
-    <div class="pure-control-group">
-      {{#each blocks as |block|}}
-        {{text-block removeBlock=(action 'removeBlock' block) block=block}}
-      {{/each}}
+      {{#unless (eq type 'page')}}
+        {{image-drop-area
+          images=images
+          uploadImage=(action 'uploadImage')
+          removeImage=(action 'removeImage')}}
+      {{/unless}}
 
       <div class="pure-control-group">
-        <button type="button" class="pure-button" {{action 'addBlock' type}}>{{t 'buttons.add_block'}}</button>
-      </div>
-    </div>
+        {{#each blocks as |block|}}
+          {{block-manager
+            removeBlock=(action 'removeBlock' block)
+            uploadImage=(action 'uploadImage')
+            removeImage=(action 'removeImage')
+            block=block}}
+        {{/each}}
 
-    {{#if (eq type 'product')}}
-      <div class="pure-control-group price">
-        <label for="price">{{t 'forms.price.label'}}</label>
-        {{input
-          id="price"
-          type="text"
-          name="price"
-          value=model.price
-          placeholder=(t 'forms.price.placeholder')}}
+        <div class="pure-control-group">
+          <button type="button" class="pure-button" {{action 'addBlock' type}}>{{t 'buttons.add_block'}}</button>
+        </div>
       </div>
-    {{/if}}
 
-    <div class="pure-controls">
-        <button type="submit" class="pure-button pure-button-primary">{{t 'buttons.submit'}}</button>
-        <button type="button" {{action 'revertChanges'}} class="pure-button">{{t 'buttons.cancel'}}</button>
-    </div>
-</form>
+      {{#if (eq type 'product')}}
+        <div class="pure-control-group price">
+          <label for="price">{{t 'forms.price.label'}}</label>
+          {{input
+            id="price"
+            type="text"
+            name="price"
+            value=model.price
+            placeholder=(t 'forms.price.placeholder')}}
+        </div>
+      {{/if}}
+
+      <div class="pure-controls">
+          <button type="submit" class="pure-button pure-button-primary">{{t 'buttons.submit'}}</button>
+          <button type="button" {{action 'revertChanges'}} class="pure-button">{{t 'buttons.cancel'}}</button>
+      </div>
+  </form>
+</div>

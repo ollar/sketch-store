@@ -1,0 +1,29 @@
+{{#unless type}}
+<select onchange={{action 'handleTypeChange' value='target.value'}}>
+  <option value="">{{t 'block_manage.type.select_type'}}</option>
+  <option value="text">{{t 'block_manage.type.text'}}</option>
+  <option value="image">{{t 'block_manage.type.image'}}</option>
+  <option value="parallax_image">{{t 'block_manage.type.parallax_image'}}</option>
+  <option value="quote">{{t 'block_manage.type.quote'}}</option>
+</select>
+{{/unless}}
+
+{{#if (eq type 'text')}}
+  <div class="pure-control-group">
+    {{textarea class="editor" value=block.content}}
+  </div>
+{{/if}}
+
+{{#if (eq type 'image')}}
+  <div class="pure-control-group">
+    {{image-drop-area
+      images=images
+      uploadImage=(action 'uploadImage')
+      removeImage=(action 'removeImage')}}
+  </div>
+{{/if}}
+{{type}}
+
+<button type="button" {{action 'removeBlock'}}>
+  {{t 'buttons.remove_block'}}
+</button>
