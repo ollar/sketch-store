@@ -5,6 +5,11 @@ export default Ember.Component.extend({
   fileStorage: Ember.inject.service(),
 
   images: Ember.computed(function() {
+    if (this.get('block.type') === 'image' && this.get('block.content')) {
+      return [
+        { url: this.get('block.content') },
+      ];
+    }
     return [];
   }),
 
@@ -13,22 +18,36 @@ export default Ember.Component.extend({
       return this.set('type', newType);
     },
 
-    uploadImage(images, file) {
-      this.uploadImage(images, file);
+    uploadImage(files) {
+      let file;
 
-      if (this.get('images.length')) {
-        this.get('images').forEach((image) => {
-          if (!file) return;
-          this.get('fileStorage').upload(`block/${this.get('block.id')}/${file.name}`, file)
-            .then((imageData) => {
-              this.set('block.content', imageData.downloadURLs[0]);
-            });
-        });
+      if (files.length >= 1) {
+        file = files[0];
+      } else {
+        return;
       }
+
+      const image = {
+        url: URL.createObjectURL(file),
+      };
+
+      this.set('block.file', file);
+      this.set('block.content', '');
+      this.get('images').pushObject(image);
     },
 
-    removeImage() {
+    removeImage(image) {
+      console.log(this.get('block.content'));
 
+      if (this.get('block.content')) {
+        this.get('fileStorage').remove(imageModel);
+      }
+
+      this.get('images').removeObject(image);
+
+
+      this.set('block.file', null);
+      this.set('block.content', '');
     },
 
     removeBlock() {

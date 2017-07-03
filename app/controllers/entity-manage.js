@@ -16,7 +16,17 @@ export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin, {
 
       if (this.get('blocks.length')) {
         this.get('blocks').forEach((block) => {
-          block.save();
+
+          if (block.get('type') === 'image') {
+            const file = block.get('file');
+            this.get('fileStorage').upload(`block/${block.id}/${file.name}`, file)
+            .then((imageData) => {
+              block.set('content', imageData.downloadURLs[0]);
+              block.save();
+            });
+          } else {
+            block.save();
+          }
         });
       }
 
