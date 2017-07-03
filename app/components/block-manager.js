@@ -8,7 +8,7 @@ export default Ember.Component.extend({
   fileStorage: Ember.inject.service(),
 
   images: Ember.computed(function() {
-    if (this.get('block.type') === 'image' && this.get('block.content')) {
+    if (this.get('block.type') === 'image' && this.get('block.content.url')) {
       return [
         {
           url: this.get('block.content.url'),

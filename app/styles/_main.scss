@@ -76,6 +76,10 @@ textarea.editor {
 .block-manager {
   margin: modular-scale(1) 0;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   .pure-control-group {
     margin: modular-scale(-1) 0;
   }
