@@ -1,0 +1,33 @@
+<div class="cart-label" {{action 'toggleCart'}}>
+  {{#if productsNumber}}
+    {{t 'cart.items_in_cart'}}
+    <span class="items-number">
+      {{productsNumber}}
+    </span>
+  {{else}}
+    {{t 'cart.cart_is_empty'}}
+  {{/if}}
+</div>
+{{#if cartIsOpen}}
+<ul class="cart-content">
+{{#each products as |product|}}
+  <li>
+    <span class="title">
+      {{product.title}}
+    </span>
+
+    <span class="multi">
+        &times;
+    </span>
+
+    <span class="price">
+      {{price product.price}}
+    </span>
+  </li>
+{{else}}
+  <li class="empty">
+    {{t 'cart.no_items'}}
+  </li>
+{{/each}}
+</ul>
+{{/if}}

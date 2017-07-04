@@ -45,6 +45,7 @@ export default {
     remove_page: 'Remove page',
     remove_category: 'Remove category',
     remove_product: 'Remove product',
+    add_to_cart: 'Add to cart',
   },
 
   links: {
@@ -76,4 +77,10 @@ export default {
       quote: 'Quote',
     },
   },
+
+  cart: {
+    cart_is_empty: 'Cart empty',
+    no_items: 'No items here',
+    items_in_cart: 'Items in cart',
+  }
 };

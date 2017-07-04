@@ -3,6 +3,7 @@ import destroyModel from '../../utils/destroy-model';
 
 export default Ember.Controller.extend({
   fileStorage: Ember.inject.service(),
+  cart: Ember.inject.service(),
 
   actions: {
     removeProduct() {
@@ -26,6 +27,10 @@ export default Ember.Controller.extend({
           });
           this.transitionToRoute('products');
         });
-    }
+    },
+
+    addToCart() {
+      this.get('cart').add(this.get('model'));
+    },
   }
 });
