@@ -59,6 +59,11 @@ export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin, {
         });
         this.transitionToRoute(entity, model);
       });
+    },
+
+    revertChanges() {
+      this.get('model').rollbackAttributes();
+      history.back();
     }
   },
 });

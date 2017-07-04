@@ -1,14 +1,16 @@
-<h1 class="page-title">
-  {{model.title}}
-</h1>
+<div class="center-wrapper content-wrapper page">
+  <h1 class="page-title">
+    {{model.title}}
+  </h1>
 
-{{quick-links
-    type='page'
-    model=model
-    remove=(action 'removePage')}}
+  {{quick-links
+      type='page'
+      model=model
+      remove=(action 'removePage')}}
 
-<div class="page-content">
-  {{#each model.blocks as |block|}}
-    {{page-block block=block}}
-  {{/each}}
+  <div class="page-content">
+    {{#each model.blocks as |block|}}
+      {{page-block block=block}}
+    {{/each}}
+  </div>
 </div>
