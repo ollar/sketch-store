@@ -44,10 +44,13 @@ header {
   }
 
   .cart-content {
-    padding: 0;
-    margin: 0;
     text-align: left;
     background-color: #fff;
+  }
+
+  .products-list {
+    padding: 0;
+    margin: 0;
 
     li {
       padding: ms(-2) ms(-1);

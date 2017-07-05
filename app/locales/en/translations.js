@@ -19,6 +19,10 @@ export default {
     price_label: 'Price:'
   },
 
+  checkout: {
+    title: 'Checkout',
+  },
+
   forms: {
     title: {
       label: 'Title',
@@ -83,5 +87,6 @@ export default {
     cart_is_empty: 'Cart empty',
     no_items: 'No items here',
     items_in_cart: 'Items in cart',
+    total: 'Total',
   }
 };

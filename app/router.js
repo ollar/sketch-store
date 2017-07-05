@@ -27,6 +27,7 @@ Router.map(function() {
 
   this.route('contacts');
   this.route('not-found', { path: '/*path' });
+  this.route('checkout');
 });
 
 export default Router;

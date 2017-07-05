@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   cart: Ember.inject.service(),
   cartIsOpen: false,
 
-  products: Ember.computed(function() {
+  products: Ember.computed('cart.items.[]', function() {
     return this.get('cart').getItems();
   }),
 
@@ -15,9 +15,19 @@ export default Ember.Component.extend({
     return this.get('products').length;
   }),
 
+  total: Ember.computed('productsNumber', function() {
+    return this.get('products').reduce((sum, product) => {
+      return sum + product.get('price');
+    }, 0);
+  }),
+
   actions: {
     toggleCart() {
       this.toggleProperty('cartIsOpen');
+    },
+
+    removeProduct(product) {
+      this.get('cart').remove(product);
     }
   }
 });

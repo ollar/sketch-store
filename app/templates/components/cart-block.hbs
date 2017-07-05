@@ -9,25 +9,35 @@
   {{/if}}
 </div>
 {{#if cartIsOpen}}
-<ul class="cart-content">
-{{#each products as |product|}}
-  <li>
-    <span class="title">
-      {{product.title}}
-    </span>
+  <div class="cart-content">
+    <ul class="products-list">
+    {{#each products as |product|}}
+      <li>
+        <span class="title">
+          {{product.title}}
+        </span>
 
-    <span class="multi">
-        &times;
-    </span>
+        <span class="multi">
+            &times;
+        </span>
 
-    <span class="price">
-      {{price product.price}}
-    </span>
-  </li>
-{{else}}
-  <li class="empty">
-    {{t 'cart.no_items'}}
-  </li>
-{{/each}}
-</ul>
+        <span class="price">
+          {{price product.price}}
+        </span>
+
+        <button class="remove" {{action 'removeProduct' product}}>&times;</button>
+      </li>
+    {{else}}
+      <li class="empty">
+        {{t 'cart.no_items'}}
+      </li>
+    {{/each}}
+    </ul>
+    <div class="total-wrapper">
+    {{t 'cart.total'}}: {{price total}}
+    </div>
+    <div>
+    {{link-to 'links.checkout' 'checkout'}}
+    </div>
+  </div>
 {{/if}}

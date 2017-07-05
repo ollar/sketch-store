@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
+  store: Ember.inject.service(),
   items: [],
 
   _getSessionItems() {
@@ -12,23 +13,24 @@ export default Ember.Service.extend({
 
   init() {
     this._super(...arguments);
-    const items = this._getSessionItems();
-    this.set('items', items);
+    this.set('items', this._getSessionItems());
   },
 
   getItems() {
-    return this.get('items');
+    return this.get('items').map((productId) => {
+      return this.get('store').findRecord('product', productId);
+    });
   },
 
   add(product) {
-    const items = this._getSessionItems();
-
-    items.push(product);
+    const items = this.get('items');
+    items.pushObject(product.id);
     sessionStorage.setItem('cartItems', JSON.stringify(items));
-    this.get('items').pushObject(product);
   },
 
   remove(product) {
-    this.get('items').removeObject(product);
+    const items = this.get('items');
+    items.removeObject(product.get('id'));
+    sessionStorage.setItem('cartItems', JSON.stringify(items));
   }
 });
