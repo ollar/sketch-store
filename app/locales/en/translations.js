@@ -1,6 +1,7 @@
 export default {
   test: {
     header: 'HEADER',
+    logo: 'LOGO',
     footer: 'FOOTER',
     admin_menu: 'admin menu',
   },

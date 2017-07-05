@@ -24,9 +24,84 @@ body > .ember-view {
 }
 
 header {
-  margin: 0;
-  height: 100px;
   background-color: #3e3;
+
+  .cart-wrapper,
+  .logo-wrapper {
+    text-align: center;
+  }
+
+  .cart-wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cart-label {
+    padding: ms(-2) ms(-1);
+    background-color: #fff;
+    position: relative;
+    z-index: 11;
+  }
+
+  .cart-content {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    background-color: #fff;
+
+    li {
+      padding: ms(-2) ms(-1);
+      display: block;
+    }
+  }
+
+  .logo-wrapper {
+    padding: ms(1) 0 0;
+  }
+
+  @include sm() {
+    .left-side {
+      float: left;
+    }
+
+    .right-side {
+      float: right;
+    }
+
+    .cart-label {
+      border: 1px solid #ccc;
+      z-index: 2;
+    }
+
+    .cart-is-open .cart-label {
+      border-bottom-color: #fff;
+    }
+
+    .cart-wrapper {
+      padding: ms(3) 0 0;
+    }
+
+    .cart-content {
+      position: absolute;
+      top: 100%;
+      margin-top: -1px;
+      right: 0;
+      width: 200px;
+      border: 1px solid #ccc;
+      padding: ms(-2);
+
+    }
+  }
+}
+
+.go-home {
+  display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
 }
 
 footer {
@@ -34,6 +109,10 @@ footer {
   height: 100px;
   background-color: #e3e;
   margin-top: -100px;
+}
+
+.clearfix{
+  @include clearfix;
 }
 
 // =============================================================================
@@ -74,7 +153,7 @@ textarea.editor {
 }
 
 .block-manager {
-  margin: modular-scale(1) 0;
+  margin: ms(1) 0;
 
   &:first-child {
     margin-top: 0;
@@ -82,5 +161,5 @@ textarea.editor {
 }
 
 .pure-control-group {
-  margin: modular-scale(-1) 0;
+  margin: ms(-1) 0;
 }

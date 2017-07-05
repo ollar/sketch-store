@@ -1,6 +1,21 @@
 <div class="center-wrapper">
-  {{ t 'test.header'}}
+  <div class="clearfix">
+    <div class="left-side">
+      <div class="logo-wrapper">
+        {{#link-to 'index' class="go-home"}}
+          <span class="logo">
+            {{t 'test.logo'}}
+          </span>
+        {{/link-to}}
+      </div>
+    </div>
+
+    <div class="right-side">
+      {{cart-block}}
+    </div>
+  </div>
+
+
 
   {{admin-menu}}
-  {{cart-block}}
 </div>

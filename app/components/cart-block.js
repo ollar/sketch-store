@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   classNames: ['cart-wrapper'],
+  classNameBindings: ['cartIsOpen'],
 
   cart: Ember.inject.service(),
   cartIsOpen: false,
