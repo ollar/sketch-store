@@ -24,13 +24,13 @@
 
     <div class="page-content">
 
-        <div class="price product-price">
-            {{price model.price}}
-        </div>
-
         {{#each model.blocks as |block|}}
             {{page-block block=block}}
         {{/each}}
+
+        <div class="price product-price">
+            {{price model.price}}
+        </div>
 
         <button class="pure-button button-add-to-cart" {{action 'addToCart'}}>
             {{t 'buttons.add_to_cart'}}

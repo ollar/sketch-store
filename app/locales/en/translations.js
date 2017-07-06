@@ -14,6 +14,10 @@ export default {
     title: 'List of all categories here'
   },
 
+  category: {
+    products: 'Products',
+  },
+
   products: {
     title: 'Products',
     price_label: 'Price:'
@@ -66,6 +70,7 @@ export default {
     remove_product: 'Remove product',
     add_to_cart: 'Add to cart',
     login: 'Login',
+    logout: 'Logout',
   },
 
   links: {
