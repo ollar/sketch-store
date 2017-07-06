@@ -35,6 +35,10 @@ module.exports = function(environment) {
       storageBucket: process.env.FIREBASE_CONNECT_storageBucket,
       messagingSenderId: process.env.FIREBASE_CONNECT_messagingSenderId,
     },
+
+    torii: {
+      sessionServiceName: 'session'
+    },
   };
 
   if (environment === 'development') {

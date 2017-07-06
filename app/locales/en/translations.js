@@ -23,6 +23,10 @@ export default {
     title: 'Checkout',
   },
 
+  login: {
+    title: 'Login',
+  },
+
   forms: {
     title: {
       label: 'Title',
@@ -38,6 +42,16 @@ export default {
     },
     fieldset: {
       blocks: 'Blocks',
+    },
+
+    email: {
+      label: 'Email',
+      placeholder: 'Type your email here',
+    },
+
+    password: {
+      label: 'Password',
+      placeholder: 'Type your password',
     }
   },
 
@@ -51,6 +65,7 @@ export default {
     remove_category: 'Remove category',
     remove_product: 'Remove product',
     add_to_cart: 'Add to cart',
+    login: 'Login',
   },
 
   links: {
@@ -63,6 +78,7 @@ export default {
     categories: 'Categories',
     products: 'Products',
     pages: 'Pages',
+    go_home: 'To the main page',
   },
 
   messages: {
@@ -71,6 +87,7 @@ export default {
     category_create_success: 'Category created',
     page_create_success: 'Page created',
     product_create_success: 'Product created',
+    no_such_page: '404 No Such Page',
   },
 
   block_manage: {

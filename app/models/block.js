@@ -12,7 +12,7 @@ export default DS.Model.extend({
   category: DS.belongsTo('category'),
   product: DS.belongsTo('product'),
 
-  handleTextSourceChange(sender, key, value, rev) {
+  handleTextSourceChange(sender, key) {
     if (this.get('type') !== 'text') return;
     this.set('content.text', showdown(this.get(key)));
   },
