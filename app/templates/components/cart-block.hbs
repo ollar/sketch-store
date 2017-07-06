@@ -13,6 +13,8 @@
     <ul class="products-list">
     {{#each products as |product|}}
       <li>
+        {{log (get product blocks)}}
+
         <span class="title">
           {{product.title}}
         </span>
@@ -35,10 +37,12 @@
     </ul>
     {{#if productsNumber}}
       <div class="total-wrapper">
-        {{t 'cart.total'}}: {{price total}}
-      </div>
-      <div>
-        {{link-to 'links.checkout' 'checkout'}}
+        <div>
+          {{t 'cart.total'}}: {{price total}}
+        </div>
+        <div>
+          {{link-to (t 'links.checkout') 'checkout'}}
+        </div>
       </div>
     {{/if}}
   </div>

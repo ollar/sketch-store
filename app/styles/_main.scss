@@ -34,6 +34,7 @@ header {
   .cart-wrapper {
     position: relative;
     z-index: 2;
+    margin: ms(1) 0 ms(-1);
   }
 
   .cart-label {
@@ -56,6 +57,11 @@ header {
       padding: ms(-2) ms(-1);
       display: block;
     }
+  }
+
+  .total-wrapper {
+    border-top: 1px dotted #ccc;
+    padding: ms(-2) ms(-1);
   }
 
   .logo-wrapper {
@@ -82,6 +88,7 @@ header {
 
     .cart-wrapper {
       padding: ms(3) 0 0;
+      margin: 0;
     }
 
     .cart-content {

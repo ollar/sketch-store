@@ -84,6 +84,7 @@ export default {
     products: 'Products',
     pages: 'Pages',
     go_home: 'To the main page',
+    checkout: 'Checkout',
   },
 
   messages: {
