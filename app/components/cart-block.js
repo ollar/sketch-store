@@ -8,14 +8,15 @@ export default Ember.Component.extend({
   cartIsOpen: false,
 
   products: Ember.computed('cart.items.[]', function() {
+    console.log(this.get('cart').getItems())
     return this.get('cart').getItems();
   }),
 
-  productsNumber: Ember.computed('products.[]', function() {
+  productsNumber: Ember.computed('products', function() {
     return this.get('products').length;
   }),
 
-  total: Ember.computed('productsNumber', function() {
+  total: Ember.computed('cart.items.@each', function() {
     return this.get('products').reduce((sum, product) => {
       return sum + product.get('price');
     }, 0);

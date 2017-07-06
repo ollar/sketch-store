@@ -2,6 +2,11 @@
 @import 'functions';
 @import 'mixins';
 
+$modularscale: (
+  base: 1em,
+  ratio: $fourth
+);
+
 @import 'main';
 @import "pod-styles";
 
