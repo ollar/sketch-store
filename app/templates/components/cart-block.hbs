@@ -33,11 +33,13 @@
       </li>
     {{/each}}
     </ul>
-    <div class="total-wrapper">
-    {{t 'cart.total'}}: {{price total}}
-    </div>
-    <div>
-    {{link-to 'links.checkout' 'checkout'}}
-    </div>
+    {{#if productsNumber}}
+      <div class="total-wrapper">
+        {{t 'cart.total'}}: {{price total}}
+      </div>
+      <div>
+        {{link-to 'links.checkout' 'checkout'}}
+      </div>
+    {{/if}}
   </div>
 {{/if}}

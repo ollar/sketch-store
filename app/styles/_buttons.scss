@@ -4,61 +4,81 @@ button {
 
   &.pure-button{
     padding: .6em 1.5em;
-    background-color: $base;
-    border: 1px solid darken($base, 20%);
-    background-image: linear-gradient($base, darken($base, 10%));
-    box-shadow: inset 0 2px 0 -1px lighten($base, 15%);
-    text-shadow: 1px 1px 0 lighten($base, 20%);
-    color: darken($base, 80%);
+    background-color: $button-base;
+    border: 1px solid darken($button-base, 20%);
+    background-image: linear-gradient($button-base, darken($button-base, 10%));
+    box-shadow: inset 0 2px 0 -1px lighten($button-base, 15%);
+    text-shadow: 1px 1px 0 lighten($button-base, 20%);
+    color: darken($button-base, 80%);
 
     &:hover {
-      background-image: linear-gradient(darken($base, 10%), $base);
-      box-shadow: inset 0 2px 0 -1px $base;
+      background-image: linear-gradient(darken($button-base, 10%), $button-base);
+      box-shadow: inset 0 2px 0 -1px $button-base;
     }
 
     &:active {
-      background-image: linear-gradient(darken($base, 20%), darken($base, 10%));
-      box-shadow: inset 0 2px 0 -1px darken($base, 25%);
+      background-image: linear-gradient(darken($button-base, 20%), darken($button-base, 10%));
+      box-shadow: inset 0 2px 0 -1px darken($button-base, 25%);
       box-shadow: none;
     }
   }
 
   &.pure-button-primary{
-    background-color: $primary;
-    border: 1px solid darken($primary, 20%);
-    background-image: linear-gradient($primary, darken($primary, 10%));
-    box-shadow: inset 0 2px 0 -1px lighten($primary, 15%);
-    text-shadow: 1px 1px 0 darken($primary, 20%);
-    color: lighten($primary, 60%);
+    background-color: $button-primary;
+    border: 1px solid darken($button-primary, 20%);
+    background-image: linear-gradient($button-primary, darken($button-primary, 10%));
+    box-shadow: inset 0 2px 0 -1px lighten($button-primary, 15%);
+    text-shadow: 1px 1px 0 darken($button-primary, 20%);
+    color: lighten($button-primary, 60%);
 
     &:hover {
-      background-image: linear-gradient(darken($primary, 10%), $primary);
-      box-shadow: inset 0 2px 0 -1px $primary;
+      background-image: linear-gradient(darken($button-primary, 10%), $button-primary);
+      box-shadow: inset 0 2px 0 -1px $button-primary;
     }
 
     &:active {
-      background-image: linear-gradient(darken($primary, 20%), darken($primary, 10%));
-      box-shadow: inset 0 2px 0 -1px darken($primary, 25%);
+      background-image: linear-gradient(darken($button-primary, 20%), darken($button-primary, 10%));
+      box-shadow: inset 0 2px 0 -1px darken($button-primary, 25%);
       box-shadow: none;
     }
   }
 
   &.remove {
-    background-color: $expressive;
-    border: 1px solid darken($expressive, 20%);
-    background-image: linear-gradient($expressive, darken($expressive, 10%));
-    box-shadow: inset 0 2px 0 -1px lighten($expressive, 15%);
-    text-shadow: 1px 1px 0 darken($expressive, 20%);
-    color: lighten($expressive, 60%);
+    background-color: $button-expressive;
+    border: 1px solid darken($button-expressive, 20%);
+    background-image: linear-gradient($button-expressive, darken($button-expressive, 10%));
+    box-shadow: inset 0 2px 0 -1px lighten($button-expressive, 15%);
+    text-shadow: 1px 1px 0 darken($button-expressive, 20%);
+    color: lighten($button-expressive, 60%);
 
     &:hover {
-      background-image: linear-gradient(darken($expressive, 10%), $expressive);
-      box-shadow: inset 0 2px 0 -1px $expressive;
+      background-image: linear-gradient(darken($button-expressive, 10%), $button-expressive);
+      box-shadow: inset 0 2px 0 -1px $button-expressive;
     }
 
     &:active {
-      background-image: linear-gradient(darken($expressive, 20%), darken($expressive, 10%));
-      box-shadow: inset 0 2px 0 -1px darken($expressive, 25%);
+      background-image: linear-gradient(darken($button-expressive, 20%), darken($button-expressive, 10%));
+      box-shadow: inset 0 2px 0 -1px darken($button-expressive, 25%);
+      box-shadow: none;
+    }
+  }
+
+  &.button-add-to-cart {
+    background-color: $button-add-to-cart;
+    border: 1px solid darken($button-add-to-cart, 20%);
+    background-image: linear-gradient($button-add-to-cart, darken($button-add-to-cart, 10%));
+    box-shadow: inset 0 2px 0 -1px lighten($button-add-to-cart, 15%);
+    text-shadow: 1px 1px 0 darken($button-add-to-cart, 20%);
+    color: lighten($button-add-to-cart, 60%);
+
+    &:hover {
+      background-image: linear-gradient(darken($button-add-to-cart, 10%), $button-add-to-cart);
+      box-shadow: inset 0 2px 0 -1px $button-add-to-cart;
+    }
+
+    &:active {
+      background-image: linear-gradient(darken($button-add-to-cart, 20%), darken($button-add-to-cart, 10%));
+      box-shadow: inset 0 2px 0 -1px darken($button-add-to-cart, 25%);
       box-shadow: none;
     }
   }

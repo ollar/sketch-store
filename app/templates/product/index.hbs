@@ -24,7 +24,9 @@
 
     <div class="page-content">
 
-        {{t 'products.price'}} {{model.price}}
+        <div class="price product-price">
+            {{price model.price}}
+        </div>
 
         {{#each model.blocks as |block|}}
             {{page-block block=block}}
