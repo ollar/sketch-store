@@ -2,18 +2,18 @@
   {{link-to product.title 'product' product.id}}
 </h3>
 
-{{#swiper-container class="images-wrapper"}}
+<div class="images-wrapper">
   {{#each product.images as |image|}}
-    <div class="swiper-slide">
+    <div class="image-wrapper">
       {{#link-to 'product' product.id}}
       <img src="{{image.url}}" class="pure-img" alt="">
       {{/link-to}}
     </div>
   {{/each}}
-{{/swiper-container}}
+</div>
 
 {{yield}}
 
-<div class="price-wrapper">
-  {{t 'products.price_label'}} {{price product.price}}
+<div class="price price-wrapper">
+  {{price product.price}}
 </div>

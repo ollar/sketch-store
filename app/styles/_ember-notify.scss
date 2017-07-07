@@ -1,0 +1,104 @@
+$info: #fff;
+$success: #a4de46;
+$warning: #f9f24e;
+$alert: #fff;
+$error: #e84e4e;
+
+.ember-notify-default.ember-notify-cn {
+  position: absolute;
+  z-index: 5000;
+  top: 0px;
+  bottom: auto;
+  right: 0px;
+}
+
+.ember-notify-default .ember-notify {
+  display: block;
+  margin: 10px;
+  position: relative;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.ember-notify-default .ember-notify-show {
+  animation-duration: 500ms;
+  animation-name: ember-notify-show;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.ember-notify-default .ember-notify-hide {
+  animation-duration: 250ms;
+  animation-name: ember-notify-hide;
+  animation-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+}
+
+.ember-notify-hide:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ember-notify-show {
+  from {
+    right: -310px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes ember-notify-hide {
+  from {
+    right: 0;
+  }
+  to {
+    right: -310px;
+  }
+}
+
+.ember-notify-default .ember-notify .close {
+  float: right;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 680px) {
+  .ember-notify-default.ember-notify-cn {
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+  .ember-notify-default .ember-notify {
+    width: 100%;
+    float: right;
+  }
+}
+
+// =============================================================================
+
+.ember-notify {
+  background-color: #fff;
+
+  &.info {
+    border-color: color($info shade(10%));
+    background-color: $info;
+  }
+
+  &.success {
+    border-color: color($success shade(10%));
+    background-color: $success;
+    color: #fff;
+  }
+
+  &.warning {
+    border-color: color($warning shade(10%));
+    background-color: $warning;
+    color: #fff;
+  }
+
+  &.error {
+    border-color: color($error shade(10%));
+    background-color: $error;
+    color: #fff;
+  }
+}

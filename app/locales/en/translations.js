@@ -94,6 +94,7 @@ export default {
     page_create_success: 'Page created',
     product_create_success: 'Product created',
     no_such_page: '404 No Such Page',
+    made_with_love: 'Made with \u2665'
   },
 
   block_manage: {

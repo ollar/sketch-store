@@ -7,8 +7,11 @@ $modularscale: (
   ratio: $fourth
 );
 
+@import 'layout';
+
 @import 'main';
 @import "pod-styles";
+@import 'ember-notify';
 
 @import 'buttons';
 

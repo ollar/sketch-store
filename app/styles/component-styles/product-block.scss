@@ -1,13 +1,11 @@
-.images-wrapper {
-  margin: 0 auto;
-  max-width: 150px;
+& {
+  margin: 0 0 ms(2);
 }
 
-.category-products & {
-  float: left;
-  width: 33%;
+.images-wrapper {
+  margin: 0 0 ms(1);
+}
 
-  .images-wrapper {
-
-  }
+.price {
+  font-size: ms(1);
 }
