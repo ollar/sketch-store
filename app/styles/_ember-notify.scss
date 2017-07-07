@@ -5,7 +5,7 @@ $alert: #fff;
 $error: #e84e4e;
 
 .ember-notify-default.ember-notify-cn {
-  position: absolute;
+  position: fixed;
   z-index: 5000;
   top: 0px;
   bottom: auto;

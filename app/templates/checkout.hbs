@@ -16,11 +16,36 @@
 
 
   <div class="checkout-form">
-    <form class="pure-form pure-form-stacked">
+    <form class="pure-form pure-form-stacked" {{action 'handleSubmit' on='submit'}}>
       <div class="pure-control-group">
-        {{input}}
+        <label for="email">{{t 'forms.email.label'}}</label>
+        {{input
+          class="email"
+          type="email"
+          id="email"
+          placeholder=(t 'forms.email.placeholder')
+          value=email
+          }}
       </div>
 
+      <div class="pure-control-group">
+        {{t 'or'}}
+      </div>
+
+      <div class="pure-control-group">
+        <label for="phone">{{t 'forms.phone.label'}}</label>
+        {{input
+          class="phone"
+          type="phone"
+          id="phone"
+          placeholder=(t 'forms.phone.placeholder')
+          value=email
+          }}
+      </div>
+
+      <div class="pure-controls">
+        <button type="submit" class="pure-button pure-button-primary">{{t 'buttons.submit'}}</button>
+      </div>
     </form>
   </div>
 

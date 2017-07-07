@@ -31,6 +31,10 @@ export default Ember.Controller.extend({
 
     addToCart() {
       this.get('cart').add(this.get('model'));
+      this.send('notify', {
+        type: 'info',
+        text: this.get('i18n').t('messages.product_added_to_cart'),
+      })
     },
   }
 });
