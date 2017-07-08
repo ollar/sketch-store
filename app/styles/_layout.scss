@@ -10,13 +10,10 @@ body > .ember-view {
 }
 
 .center-wrapper{
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 ms(1);
+  @include center-wrapper;
 }
 
 header {
-  overflow: hidden;
   flex-shrink: 0;
 }
 

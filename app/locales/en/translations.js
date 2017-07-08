@@ -25,6 +25,7 @@ export default {
 
   checkout: {
     title: 'Checkout',
+    or: '- or -',
   },
 
   login: {
@@ -51,6 +52,11 @@ export default {
     email: {
       label: 'Email',
       placeholder: 'Type your email here',
+    },
+
+    phone: {
+      label: 'Phone',
+      placeholder: 'Type your phone here',
     },
 
     password: {
