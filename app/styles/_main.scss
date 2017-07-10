@@ -197,3 +197,22 @@ textarea.editor {
 .pure-control-group {
   margin: ms(-1) 0;
 }
+
+// =============================================================================
+// ================================================================== Index page
+// =============================================================================
+
+.categories,
+.products {
+  .category,
+  .product {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-gap: 1em;
+  }
+
+  .image-wrapper {
+    background-color: #e3e;
+  }
+}

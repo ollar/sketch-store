@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import DS from 'ember-data';
 
 export default Ember.Component.extend({
   classNames: ['cart-wrapper'],
@@ -8,11 +9,13 @@ export default Ember.Component.extend({
   cartIsOpen: false,
 
   products: Ember.computed('cart.items.[]', function() {
-    return this.get('cart').getItems();
+    return DS.PromiseArray.create({
+      promise: this.get('cart').getItems(),
+    });
   }),
 
-  productsNumber: Ember.computed('products', function() {
-    return this.get('products').length;
+  productsNumber: Ember.computed('products.isFulfilled', function() {
+    return this.get('products.length');
   }),
 
   total: Ember.computed('products.@each.price', function() {

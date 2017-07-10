@@ -13,6 +13,12 @@
     <ul class="products-list">
     {{#each products as |product|}}
       <li>
+        {{!-- <span class="images">
+          {{log product.images}}
+          {{#if product.images}}
+            {{product.images.0.url}}
+          {{/if}}
+        </span> --}}
         <span class="title">
           {{product.title}}
         </span>

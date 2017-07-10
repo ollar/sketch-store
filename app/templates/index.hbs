@@ -1,1 +1,23 @@
-{{outlet}}
+<div class="categories">
+  {{#each model.categories as |category|}}
+    <div class="category">
+      {{#each category.images as |image index|}}
+        <div class="image-wrapper">
+          <img src="{{image.url}}" class="pure-img">
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>
+
+<div class="products">
+  {{#each model.products as |product|}}
+    <div class="product">
+      {{#each product.images as |image index|}}
+        <div class="image-wrapper">
+          <img src="{{image.url}}" class="pure-img">
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>

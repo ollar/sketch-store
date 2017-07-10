@@ -17,9 +17,12 @@ export default Ember.Service.extend({
   },
 
   getItems() {
-    return this.get('items').map((productId) => {
-      return this.get('store').findRecord('product', productId);
-    });
+    return Ember.RSVP.all(this.get('items').map((productId) => {
+      return this.get('store').findRecord('product', productId).then((product) => {
+        product.get('images');
+        return product;
+      });
+    }));
   },
 
   add(product) {
