@@ -202,17 +202,12 @@ textarea.editor {
 // ================================================================== Index page
 // =============================================================================
 
-.categories,
-.products {
-  .category,
-  .product {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
-    grid-gap: 1em;
+.categories {
+  h2 {
+    margin: ms(6, 16px) 0 0 ms(2, 16px);
   }
 
-  .image-wrapper {
-    background-color: #e3e;
+  .description {
+    margin: ms(1, 16px) 0 ms(2, 16px) ms(2, 16px);
   }
 }
