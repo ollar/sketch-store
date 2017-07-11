@@ -1,8 +1,19 @@
-<h2 class="title" data-swiper-parallax="-100">
+<h2 class="category-title" data-swiper-parallax="-100">
   {{category.title}}
 </h2>
 
 <div class="description" data-swiper-parallax="-200">
-  {{{description}}}
+  {{{slice description 300}}}
 </div>
 
+
+{{#swiper-container class="products"
+  options=(hash
+      effect='slide'
+      parallax=true
+      nested=true
+  )}}
+  {{#each category.products as |product|}}
+    {{product-slide product=product}}
+  {{/each}}
+{{/swiper-container}}

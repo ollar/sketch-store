@@ -149,6 +149,10 @@ h6 {
 
 // =============================================================================
 
+.page-content-wrapper{
+  position: relative;
+}
+
 .content-wrapper{
   margin-top: 40px;
   margin-bottom: 40px;
@@ -203,11 +207,48 @@ textarea.editor {
 // =============================================================================
 
 .categories {
-  h2 {
+  .swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  h2.category-title {
     margin: ms(6, 16px) 0 0 ms(2, 16px);
+    background-color: $white;
+    display: inline-block;
+    padding: 5px ;
   }
 
   .description {
     margin: ms(1, 16px) 0 ms(2, 16px) ms(2, 16px);
+
+    p {
+      padding: 5px ;
+      background-color: $white;
+      display: inline;
+
+      @include clearfix;
+    }
+  }
+
+  .products {
+    .product {
+      position: relative;
+      height: 200px;
+    }
+
+    .image-wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    h2,
+    .description {
+      position: relative;
+      z-index: 2;
+    }
   }
 }
