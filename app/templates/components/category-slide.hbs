@@ -1,9 +1,11 @@
-<h2 class="category-title" data-swiper-parallax="-100">
-  {{category.title}}
-</h2>
+<div class="category-wrapper">
+  <h2 class="category-title" data-swiper-parallax="-200">
+    {{category.title}}
+  </h2>
 
-<div class="description" data-swiper-parallax="-200">
-  {{{slice description 300}}}
+  <div class="description" data-swiper-parallax="-500">
+    {{{slice description 300}}}
+  </div>
 </div>
 
 
@@ -11,7 +13,9 @@
   options=(hash
       effect='slide'
       parallax=true
-      nested=true
+      auto=true
+      nested=5000
+      slidesPerView=2
   )}}
   {{#each category.products as |product|}}
     {{product-slide product=product}}
