@@ -7,11 +7,11 @@ export default {
   },
 
   pages: {
-    title: 'List of all pages here'
+    title: 'Pages'
   },
 
   categories: {
-    title: 'List of all categories here'
+    title: 'Categories'
   },
 
   category: {

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['swiper-slide', 'product'],
+  classNames: ['product'],
 
   description: Ember.computed('product.blocks.@each.content', function() {
     if (this.get('product.blocks.length')) {

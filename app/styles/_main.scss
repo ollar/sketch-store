@@ -238,7 +238,6 @@ textarea.editor {
 
 .categories {
   min-height: 100%;
-  background-color: #e3e;
   display: flex;
 
   .swiper-slide {
@@ -250,7 +249,8 @@ textarea.editor {
   }
 
   .category-wrapper {
-    flex-grow: 1;
+    flex-grow: 2;
+    margin-bottom: ms(3, 16px);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -275,6 +275,10 @@ textarea.editor {
   }
 
   .products {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+
     .product {
       position: relative;
       height: 300px;

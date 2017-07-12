@@ -52,6 +52,7 @@ footer {
 .products-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   .product-block {
     flex-basis: 100%;
@@ -60,14 +61,37 @@ footer {
 
   @include sm {
     .product-block {
-      flex-basis: 50%;
+      flex-basis: 49%;
     }
   }
 
   @include md {
    .product-block {
-      flex-basis: 33%;
+      flex-basis: 32%;
     }
   }
 }
 
+// =============================================================================
+// ================================================================== Index page
+// =============================================================================
+
+.categories {
+  .products {
+    width: 100%;
+    overflow: hidden;
+
+    .product {
+      flex-basis: 100%;
+      flex-shrink: 0;
+
+      @include sm {
+        flex-basis: 50%;
+      }
+
+      @include md {
+        flex-basis: 33%;
+      }
+    }
+  }
+}

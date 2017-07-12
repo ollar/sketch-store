@@ -1,5 +1,7 @@
 <h2>
-  {{product.title}}
+  {{#link-to 'product' product}}
+    {{product.title}}
+  {{/link-to}}
 </h2>
 
 <div class="description">
