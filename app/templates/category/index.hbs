@@ -1,15 +1,17 @@
 {{#if model.images}}
-    {{#swiper-container class="images-wrapper full-width"
-        options=(hash
-            autoplay=5000
-            freeMode=true
-        )}}
-        {{#each model.images as |image|}}
-            <div class="swiper-slide">
-                <img src="{{image.url}}" alt="">
-            </div>
-        {{/each}}
-    {{/swiper-container}}
+    {{#entity-images-wrapper}}
+        {{#swiper-container class="images-wrapper full-width"
+            options=(hash
+                autoplay=5000
+                effect='slide'
+            )}}
+            {{#each model.images as |image|}}
+                <div class="swiper-slide">
+                    <img src="{{image.url}}" alt="">
+                </div>
+            {{/each}}
+        {{/swiper-container}}
+    {{/entity-images-wrapper}}
 {{/if}}
 
 <div class="center-wrapper content-wrapper category-page">

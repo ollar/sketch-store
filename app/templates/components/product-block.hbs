@@ -2,15 +2,28 @@
   {{link-to product.title 'product' product.id}}
 </h3>
 
-<div class="images-wrapper">
+{{!-- {{#swiper-container class=""
+    options=(hash
+        effect='slide'
+        height=3000
+    )
+  }}
   {{#each product.images as |image|}}
-    <div class="image-wrapper">
+    <div class="swiper-slide">
       {{#link-to 'product' product.id}}
       <img src="{{image.url}}" class="pure-img" alt="">
       {{/link-to}}
     </div>
   {{/each}}
-</div>
+{{/swiper-container}} --}}
+
+{{#if image}}
+  <div class="image-wrapper">
+    {{#link-to 'product' product.id}}
+      <img src="{{image.url}}" class="" alt="{{product.title}}">
+    {{/link-to}}
+  </div>
+{{/if}}
 
 {{yield}}
 

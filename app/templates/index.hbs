@@ -1,10 +1,12 @@
-{{#swiper-container class="categories full-width"
-  options=(hash
-      effect='slide'
-      parallax=true
-  )
-}}
-  {{#each model.categories as |category|}}
-      {{category-slide category=category}}
-  {{/each}}
-{{/swiper-container}}
+{{#index-categories-wrapper}}
+  {{#swiper-container class="categories full-width"
+    options=(hash
+        effect='slide'
+        parallax=true
+    )
+  }}
+    {{#each model.categories as |category|}}
+        {{category-slide category=category}}
+    {{/each}}
+  {{/swiper-container}}
+{{/index-categories-wrapper}}

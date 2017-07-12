@@ -4,7 +4,7 @@
   </h2>
 
   <div class="description" data-swiper-parallax="-500">
-    {{{slice description 300}}}
+    {{{slice description 100}}}
   </div>
 </div>
 
@@ -12,10 +12,9 @@
 {{#swiper-container class="products"
   options=(hash
       effect='slide'
-      parallax=true
-      auto=true
-      nested=5000
-      slidesPerView=2
+      auto=5000
+      nested=true
+      slidesPerView=1
   )}}
   {{#each category.products as |product|}}
     {{product-slide product=product}}

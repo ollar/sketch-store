@@ -162,22 +162,52 @@ h6 {
 
 .images-wrapper {
   &.full-width {
-    max-height:  500px;
     overflow: hidden;
 
     img {
-      width: 100%;
-      max-height: 100%;
+      // max-width: 100%;
+      height: 100%;
     }
   }
 }
 
 .price {
-
   &.product-price{
     color: $button-primary;
     font-size: ms(2);
     margin: ms(1) 0;
+  }
+}
+
+.entity-images-wrapper {
+  display: flex;
+
+  .swiper-container {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+
+
+.product-block {
+  display: flex;
+  flex-direction: column;
+
+  .image-wrapper {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      // height: 100%;
+      max-width: 100%;
+    }
   }
 }
 
@@ -207,6 +237,10 @@ textarea.editor {
 // =============================================================================
 
 .categories {
+  min-height: 100%;
+  background-color: #e3e;
+  display: flex;
+
   .swiper-slide {
     background-position: center;
     background-repeat: no-repeat;
