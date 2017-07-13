@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   templateName: 'entity-manage',
-  controllerName: 'page/edit',
+  controllerName: 'entity-manage',
 
   beforeModel() {
     if (!this.get('session.isAuthenticated')) {
