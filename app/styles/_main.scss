@@ -265,13 +265,10 @@ textarea.editor {
 
   .description {
     margin: ms(1, 16px) 0 ms(2, 16px) ms(2, 16px);
+    background-color: $white;
+    display: inline;
 
-    p {
-      background-color: $white;
-      display: inline;
-
-      @include clearfix;
-    }
+    @include clearfix;
   }
 
   .products {
@@ -317,3 +314,33 @@ textarea.editor {
     }
   }
 }
+
+// =============================================================================
+// ================================================================== Pages page
+// ============================================================= Categories page
+// =============================================================================
+
+.pages-list,
+.categories-list {
+  color: $iron;
+  margin: ms(-1) 0;
+
+  .index {
+    margin: 0 ms(-1) 0 0;
+  }
+
+  .short-description {
+    margin: 0 0 ms(1);
+  }
+
+  dt {
+    margin: 0 0 ms(-1);
+  }
+
+  dd {
+    color: $black;
+    font-size: 0.85em;
+    margin: 0 0 0 ms(2);
+  }
+}
+

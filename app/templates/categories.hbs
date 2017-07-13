@@ -7,13 +7,11 @@
     {{link-to (t 'links.create_category') 'category-create'}}
   {{/quick-links}}
 
-  <ol>
-    {{#each model as |category|}}
-      <li>
-        {{link-to category.title 'category' category.alias}}
-      </li>
+  <div class="categories-list">
+    {{#each model as |category index|}}
+      {{entity-description model=category index=(add index 1)}}
     {{else}}
       {{t 'messages.empty'}}
     {{/each}}
-  </ol>
+  </div>
 </div>

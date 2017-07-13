@@ -7,13 +7,11 @@
     {{link-to (t 'links.create_page') 'page-create'}}
   {{/quick-links}}
 
-  <ol>
-    {{#each model as |page|}}
-      <li>
-        {{link-to page.title 'page' page.alias}}
-      </li>
+  <div class="pages-list">
+    {{#each model as |page index|}}
+      {{entity-description model=page index=(add index 1)}}
     {{else}}
       {{t 'messages.empty'}}
     {{/each}}
-  </ol>
+  </div>
 </div>

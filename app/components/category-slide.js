@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import stripTags from '../utils/strip-tags';
 
 export default Ember.Component.extend({
   classNames: ['swiper-slide', 'category-slide'],
@@ -19,7 +20,7 @@ export default Ember.Component.extend({
 
   description: Ember.computed('category.blocks.@each.content', function() {
     if (this.get('category.blocks.length')) {
-      return this.get('category.blocks.firstObject.content.text');
+      return stripTags(this.get('category.blocks.firstObject.content.text'));
     }
 
     return null;
