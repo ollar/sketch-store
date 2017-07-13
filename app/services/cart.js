@@ -1,8 +1,13 @@
 import Ember from 'ember';
+import _ from 'lodash/collection';
 
 export default Ember.Service.extend({
   store: Ember.inject.service(),
   items: [],
+
+  itemsSorted: Ember.computed('items.[]', function() {
+    return _.countBy(this.get('items'));
+  }),
 
   _getSessionItems() {
     let items = sessionStorage.getItem('cartItems');
@@ -17,9 +22,9 @@ export default Ember.Service.extend({
   },
 
   getItems() {
-    return Ember.RSVP.all(this.get('items').map((productId) => {
+    return Ember.RSVP.all(_.map(this.get('itemsSorted'), (qty, productId) => {
       return this.get('store').findRecord('product', productId).then((product) => {
-        product.get('images');
+        product.set('qty', qty);
         return product;
       });
     }));

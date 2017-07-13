@@ -20,7 +20,7 @@ export default Ember.Component.extend({
 
   total: Ember.computed('products.@each.price', function() {
     return this.get('products').reduce((sum, product) => {
-      return sum + product.get('price');
+      return sum + product.get('qty') * product.get('price');
     }, 0);
   }),
 

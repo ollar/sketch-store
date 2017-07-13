@@ -103,6 +103,7 @@ export default {
     made_with_love: 'Made with \u2665',
 
     welcome_default: 'Welcome back, master',
+    product_added_to_cart: 'Product added to cart',
   },
 
   block_manage: {

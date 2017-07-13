@@ -15,6 +15,26 @@ body > .ember-view {
 
 header {
   flex-shrink: 0;
+
+  @include sm() {
+    .left-side {
+      float: left;
+    }
+
+    .right-side {
+      float: right;
+    }
+
+    .cart-content {
+      position: absolute;
+      top: 100%;
+      margin-top: -1px;
+      right: 0;
+      width: 300px;
+      border: 1px solid $iron;
+      padding: ms(-2);
+    }
+  }
 }
 
 .page-content-wrapper {
@@ -49,25 +69,27 @@ footer {
 // =============================================================== Products list
 // =============================================================================
 
-.products-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.category-products {
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  .product-block {
-    flex-basis: 100%;
-    // flex-grow: 1;
-  }
-
-  @include sm {
     .product-block {
-      flex-basis: 49%;
+      flex-basis: 100%;
+      // flex-grow: 1;
     }
-  }
 
-  @include md {
-   .product-block {
-      flex-basis: 32%;
+    @include sm {
+      .product-block {
+        flex-basis: 49%;
+      }
+    }
+
+    @include md {
+     .product-block {
+        flex-basis: 32%;
+      }
     }
   }
 }
