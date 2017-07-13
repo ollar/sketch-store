@@ -20,7 +20,7 @@ Router.map(function() {
   this.route('product-create', { path: 'product/new' });
 
   this.route('pages');
-  this.route('page', { path: 'page/:page_id' }, function() {
+  this.route('page', { path: 'page/:page_alias' }, function() {
     this.route('edit');
   });
   this.route('page-create', { path: 'page/new' });

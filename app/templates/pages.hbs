@@ -10,7 +10,7 @@
   <ol>
     {{#each model as |page|}}
       <li>
-        {{link-to page.title 'page' page}}
+        {{link-to page.title 'page' page.alias}}
       </li>
     {{else}}
       {{t 'messages.empty'}}
