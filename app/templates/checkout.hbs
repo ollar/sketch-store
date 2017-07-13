@@ -3,17 +3,15 @@
     {{t 'checkout.title'}}
   </h1>
 
-  <ul class="cart-content">
-    {{#each model.products as |product|}}
-      <li>
-        {{log product}}
-        <span>{{get product images}}</span>
-        <span>{{product.title}}</span>
-      </li>
+
+  <h2>
+    {{t 'checkout.cart_content'}}
+  </h2>
+  <ul class="checkout-cart-content">
+    {{#each products as |product|}}
+      {{cart-item product=product removeProduct=(action 'removeProduct')}}
     {{/each}}
   </ul>
-
-
 
   <div class="checkout-form">
     <form class="pure-form pure-form-stacked" {{action 'handleSubmit' on='submit'}}>

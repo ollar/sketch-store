@@ -1,0 +1,31 @@
+{{#if product.images}}
+  <span class="product-image">
+    {{#link-to 'product' product.alias}}
+      <img src="{{product.images.firstObject.url}}" class="pure-img">
+    {{/link-to}}
+  </span>
+{{/if}}
+<div class="content">
+  <span class="title">
+    {{#link-to 'product' product.alias}}
+      {{product.title}}
+    {{/link-to}}
+  </span>
+
+  <div class="price-wrapper">
+    <span class="qty">
+      {{product.qty}}
+    </span>
+
+    <span class="multi">
+      &times;
+    </span>
+
+    <span class="price">
+      {{price product.price}}
+    </span>
+  </div>
+
+</div>
+
+<a class="remove" href="" {{action 'removeProduct' product}}>&times;</a>

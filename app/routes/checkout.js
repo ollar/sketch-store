@@ -6,7 +6,6 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       order: this.get('store').createRecord('order'),
-      products: this.get('cart').getItems(),
     });
   }
 });

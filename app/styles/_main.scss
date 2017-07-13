@@ -22,11 +22,16 @@ header {
     text-align: center;
   }
 
-  .cart-wrapper {
-    position: relative;
-    z-index: 2;
-    margin: ms(1) 0 ms(-1);
+  .logo-wrapper {
+    padding: ms(1) 0 0;
   }
+}
+
+.cart-wrapper,
+.checkout-cart-content {
+  position: relative;
+  z-index: 2;
+  margin: ms(1) 0 ms(-1);
 
   .cart-label {
     padding: ms(-2) ms(-1);
@@ -43,31 +48,37 @@ header {
   .products-list {
     padding: 0;
     margin: 0;
+  }
 
-    li {
-      padding: ms(-2) ms(-1);
-      display: flex;
-      align-items: center;
-    }
+  li {
+    padding: ms(-2) ms(-1);
+    display: flex;
+    align-items: center;
+  }
 
-    .empty {
-      text-align: center;
-      display: block;
-    }
+  .empty {
+    text-align: center;
+    display: block;
+  }
 
-    .product-image {
-      width: 50px;
-      height: 50px;
-      vertical-align: middle;
-      flex-grow: 0;
-      margin-right: 10px;
-      display: flex;
-      align-items: center;
-    }
+  .product-image {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    flex-grow: 0;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
 
-    .content {
-      flex-grow: 1;
-    }
+  .content {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .price-wrapper {
+    flex-grow: 1;
+    text-align: right;
   }
 
   .remove {
@@ -85,23 +96,17 @@ header {
     padding: ms(-2) ms(-1);
   }
 
-  .logo-wrapper {
-    padding: ms(1) 0 0;
-  }
-
   @include sm() {
+    padding: ms(3) 0 0;
+    margin: 0;
+
     .cart-label {
       border: 1px solid $iron;
       z-index: 2;
     }
 
-    .cart-is-open .cart-label {
+    &.cart-is-open .cart-label {
       border-bottom-color: $white;
-    }
-
-    .cart-wrapper {
-      padding: ms(3) 0 0;
-      margin: 0;
     }
 
     .total-wrapper {
@@ -364,3 +369,12 @@ textarea.editor {
   }
 }
 
+// =============================================================================
+// =============================================================== Checkout page
+// =============================================================================
+
+.checkout-cart-content {
+  padding: 0;
+  margin: 0;
+  background-color: darken($white, 5%);
+}

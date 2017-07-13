@@ -12,40 +12,7 @@
   <div class="cart-content">
     <ul class="products-list">
     {{#each products as |product|}}
-      <li>
-        <span class="qty">
-          {{product.qty}}
-        </span>
-
-        <span class="multi">
-          &times;
-        </span>
-
-        {{#if product.images}}
-          <span class="product-image">
-            {{#link-to 'product' product.alias}}
-              <img src="{{product.images.firstObject.url}}" class="pure-img">
-            {{/link-to}}
-          </span>
-        {{/if}}
-        <div class="content">
-          <span class="title">
-            {{#link-to 'product' product.alias}}
-              {{product.title}}
-            {{/link-to}}
-          </span>
-
-          <span class="multi">
-              &times;
-          </span>
-
-          <span class="price">
-            {{price product.price}}
-          </span>
-        </div>
-
-        <a class="remove" href="" {{action 'removeProduct' product}}>&times;</a>
-      </li>
+      {{cart-item product=product removeProduct=(action 'removeProduct')}}
     {{else}}
       <li class="empty">
         {{t 'cart.no_items'}}

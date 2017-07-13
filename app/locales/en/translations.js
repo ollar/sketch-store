@@ -25,6 +25,7 @@ export default {
 
   checkout: {
     title: 'Checkout',
+    cart_content: 'Cart content',
     or: '- or -',
   },
 
@@ -104,6 +105,8 @@ export default {
 
     welcome_default: 'Welcome back, master',
     product_added_to_cart: 'Product added to cart',
+    thank_you: 'Thank you!',
+    we_will_contact_you: 'We will contact you soon',
   },
 
   block_manage: {

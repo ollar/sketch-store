@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   notify: Ember.inject.service(),
   notificationTypes: ['info', 'success', 'warning', 'alert', 'error'],
 
-  beforeModel(transition) {
+  beforeModel() {
     return this.get('session').fetch()
       .catch(() => false);
   },

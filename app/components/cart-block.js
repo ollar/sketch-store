@@ -14,8 +14,8 @@ export default Ember.Component.extend({
     });
   }),
 
-  productsNumber: Ember.computed('products.isFulfilled', function() {
-    return this.get('products.length');
+  productsNumber: Ember.computed('cart.items.[]', 'products.isFulfilled', function() {
+    return this.get('cart.items.length');
   }),
 
   total: Ember.computed('products.@each.price', function() {
