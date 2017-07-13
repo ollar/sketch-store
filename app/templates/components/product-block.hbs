@@ -1,5 +1,5 @@
 <h3>
-  {{link-to product.title 'product' product.id}}
+  {{link-to product.title 'product' product.alias}}
 </h3>
 
 {{!-- {{#swiper-container class=""
@@ -19,7 +19,7 @@
 
 {{#if image}}
   <div class="image-wrapper">
-    {{#link-to 'product' product.id}}
+    {{#link-to 'product' product.alias}}
       <img src="{{image.url}}" class="" alt="{{product.title}}">
     {{/link-to}}
   </div>

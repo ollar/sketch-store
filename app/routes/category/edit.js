@@ -1,19 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  templateName: 'entity-manage',
+  controllerName: 'entity-manage',
+
   beforeModel() {
     if (!this.get('session.isAuthenticated')) {
       return this.transitionTo('index');
     }
   },
-  renderTemplate(controller, model) {
-    let _controller = this.controllerFor('entity-manage');
-
-    _controller.set('type', 'category');
-
-    this.render('entity-manage', {
-      controller: _controller,
-      model: model,
-    });
+  setupController(controller, model) {
+    controller.set('type', 'category');
+    this._super(controller, model);
   },
 });

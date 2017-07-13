@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import destroyModel from '../utils/destroy-model';
+import destroyModel from '../../utils/destroy-model';
 
 export default Ember.Controller.extend({
   actions: {
