@@ -45,6 +45,7 @@
     "ember-source": "~2.12.0",
     "emberfire": "^2.0.7",
     "eslint": "^4.0.0",
+    "liquid-fire": "^0.27.3",
     "loader.js": "^4.2.3",
     "torii": "^0.9.5"
   },
