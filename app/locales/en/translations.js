@@ -107,6 +107,10 @@ export default {
     product_added_to_cart: 'Product added to cart',
     thank_you: 'Thank you!',
     we_will_contact_you: 'We will contact you soon',
+
+    page_removed_success: 'Page removed',
+    product_removed_success: 'Product removed',
+    category_removed_success: 'Category removed',
   },
 
   block_manage: {

@@ -57,7 +57,7 @@ export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin, {
           type: 'success',
           text: this.get('i18n').t(`messages.${entity}_create_success`),
         });
-        this.transitionToRoute(entity, model);
+        this.transitionToRoute(entity, model.get('alias'));
       });
     },
 

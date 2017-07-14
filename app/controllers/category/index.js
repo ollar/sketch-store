@@ -2,16 +2,8 @@ import Ember from 'ember';
 import destroyModel from '../../utils/destroy-model';
 
 export default Ember.Controller.extend({
-  fileStorage: Ember.inject.service(),
-
   actions: {
     removeCategory() {
-      if (this.get('model.images.length')) {
-        this.get('model.images').forEach((imageModel) => {
-          this.get('fileStorage').remove(imageModel);
-        });
-      }
-
       if (this.get('model.products.content')) {
         this.get('model.products').toArray().forEach((product) => {
           product.set('category', null);
