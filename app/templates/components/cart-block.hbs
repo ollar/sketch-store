@@ -2,13 +2,13 @@
   {{#if productsNumber}}
     {{t 'cart.items_in_cart'}}
     <span class="items-number">
-      {{productsNumber}}
+      {{liquid-bind productsNumber}}
     </span>
   {{else}}
     {{t 'cart.cart_is_empty'}}
   {{/if}}
 </div>
-{{#if cartIsOpen}}
+{{#liquid-if cartIsOpen class="liquid-cart-content-wrapper"}}
   <div class="cart-content">
     <ul class="products-list">
     {{#each products as |product|}}
@@ -30,4 +30,4 @@
       </div>
     {{/if}}
   </div>
-{{/if}}
+{{/liquid-if}}

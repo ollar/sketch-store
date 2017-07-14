@@ -38,6 +38,20 @@ header {
     background-color: $white;
     position: relative;
     z-index: 11;
+
+    .items-number {
+      position: relative;
+      background-color: $bouquet;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 50%;
+      color: $white;
+      font-size: 0.8em;
+      vertical-align: middle;
+    }
   }
 
   .cart-content {
