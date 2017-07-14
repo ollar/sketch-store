@@ -8,7 +8,7 @@ export default function() {
 
   this.transition(
     this.withinRoute(['index', 'pages', 'categories', 'products']),
-    this.use('wait', 100, { then: 'fade' })
+    this.use('page')
   );
 
   this.transition(
