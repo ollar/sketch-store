@@ -23,7 +23,14 @@ export default Ember.Controller.extend({
       const order = model.order;
 
       this.get('products').forEach((_model) => {
-        order.get('products').pushObject(_model);
+        const orderProduct = this.get('store').createRecord('order-product');
+
+        orderProduct.setProperties({
+          product: _model,
+          qty: _model.get('qty'),
+        });
+
+        order.get('products').pushObject(orderProduct.toJSON());
       });
 
       order.setProperties({
