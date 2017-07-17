@@ -6,9 +6,7 @@
                 effect='slide'
             )}}
             {{#each model.images as |image|}}
-                <div class="swiper-slide">
-                    <img src="{{image.url}}" alt="">
-                </div>
+                <div class="swiper-slide" style="background-image: url({{image.url}})"></div>
             {{/each}}
         {{/swiper-container}}
     {{/entity-images-wrapper}}

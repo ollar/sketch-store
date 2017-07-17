@@ -16,31 +16,34 @@ body > .ember-view {
 header {
   flex-shrink: 0;
 
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: ms(-1) ms(1);
+  }
+
+  .logo {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+
   @include sm() {
-    .left-side {
-      float: left;
+    .flex-wrapper {
+      padding: ms(1);
     }
 
-    .right-side {
-      float: right;
+    .logo {
+      height: 100px;
+      width: 100px;
     }
   }
 }
 
 .cart-wrapper {
   @include sm() {
-    .liquid-cart-content-wrapper {
-      position: absolute;
-      top: 100%;
-      margin-top: -1px;
-      right: 0;
-      width: 300px;
-    }
 
-    .cart-content {
-      border: 1px solid $iron;
-      padding: ms(-2);
-    }
   }
 }
 

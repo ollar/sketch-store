@@ -126,7 +126,7 @@ export default {
   cart: {
     cart_is_empty: 'Cart empty',
     no_items: 'No items here',
-    items_in_cart: 'Items in cart',
+    items_in_cart: 'Cart',
     total: 'Total',
   }
 };

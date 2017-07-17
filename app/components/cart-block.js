@@ -29,6 +29,11 @@ export default Ember.Component.extend({
       this.toggleProperty('cartIsOpen');
     },
 
+    closeCart() {
+      console.log('closeCart')
+      this.set('cartIsOpen', false);
+    },
+
     removeProduct(product) {
       this.get('cart').remove(product);
     }

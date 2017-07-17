@@ -11,7 +11,7 @@ export default Ember.Service.extend({
   upload(path, file) {
     return this.get('storageRef').ref(path).put(file)
       .then((snapshot) => snapshot.metadata)
-      .catch((e) => console.log(e));
+      .catch(() => false);
   },
 
   remove(imageModel, path) {
