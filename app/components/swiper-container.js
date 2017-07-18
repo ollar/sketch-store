@@ -6,9 +6,13 @@ export default Ember.Component.extend({
   didInsertElement() {
     this._super(...arguments);
 
-    this.set('swiper', new Swiper(this.$('.swiper-container'), {
-      effect: 'fade',
-      ...this.options,
-    }));
+    Ember.run(() => {
+      Ember.run.schedule('afterRender', () => {
+        this.set('swiper', new Swiper(this.$('.swiper-container'), {
+          effect: 'fade',
+          ...this.options,
+        }));
+      });
+    });
   }
 });

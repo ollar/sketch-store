@@ -5,8 +5,17 @@ export default Ember.Component.extend({
   classNames: ['cart-wrapper'],
   classNameBindings: ['cartIsOpen'],
 
+  router: Ember.inject.service('-routing'),
+
   cart: Ember.inject.service(),
   cartIsOpen: false,
+
+  init() {
+    this._super();
+
+    const router = this.get('router');
+    router.addObserver('currentRouteName', this, 'closeCart');
+  },
 
   products: Ember.computed('cart.items.[]', function() {
     return DS.PromiseArray.create({
@@ -24,14 +33,17 @@ export default Ember.Component.extend({
     }, 0);
   }),
 
+  closeCart() {
+    Ember.run(() =>
+      Ember.run.schedule('afterRender', () =>
+        this.set('cartIsOpen', false)
+      )
+    );
+  },
+
   actions: {
     toggleCart() {
       this.toggleProperty('cartIsOpen');
-    },
-
-    closeCart() {
-      console.log('closeCart')
-      this.set('cartIsOpen', false);
     },
 
     removeProduct(product) {
