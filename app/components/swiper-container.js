@@ -8,10 +8,9 @@ export default Ember.Component.extend({
 
     Ember.run(() => {
       Ember.run.schedule('afterRender', () => {
-        this.set('swiper', new Swiper(this.$('.swiper-container'), {
+        this.set('swiper', new Swiper(this.$('.swiper-container'), Object.assign({}, {
           effect: 'fade',
-          ...this.options,
-        }));
+        }, this.options)));
       });
     });
   }

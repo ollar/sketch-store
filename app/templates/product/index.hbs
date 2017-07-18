@@ -3,7 +3,7 @@
         {{#swiper-container class="images-wrapper full-width"
             options=(hash
                 autoplay=5000
-                freeMode=true
+                effect='slide'
             )}}
             {{#each model.images as |image|}}
                 {{entity-image imageUrl=image.url}}

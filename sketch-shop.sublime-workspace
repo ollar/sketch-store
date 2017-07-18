@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"order",
+				"orderProduct"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"old",
+				"oldElement"
+			],
+			[
+				"fun",
+				"functions"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"tea",
+				"text-align"
+			],
+			[
+				"mi",
+				"middle"
+			],
+			[
+				"flex",
+				"flex-grow"
+			],
+			[
+				"ca",
+				"categories"
+			],
+			[
+				"fo",
+				"font-kerning"
+			],
+			[
+				"swiper",
+				"swiper-slide"
+			],
+			[
+				"produ",
+				"products-list"
+			],
+			[
 				"co",
 				"catController"
 			],
@@ -31,6 +87,41 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/styles/_main.scss",
+			"settings":
+			{
+				"buffer_size": 6382,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/_layout.scss",
+			"settings":
+			{
+				"buffer_size": 2205,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/index.hbs",
+			"settings":
+			{
+				"buffer_size": 256,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/components/swiper-container.js",
+			"settings":
+			{
+				"buffer_size": 371,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -68,7 +159,7 @@
 				"Preferences: Settings"
 			]
 		],
-		"width": 467.0
+		"width": 521.0
 	},
 	"console":
 	{
@@ -88,17 +179,92 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/ollar/Documents/dev/scetch-shop",
-		"/Users/ollar/Documents/dev/scetch-shop/app",
-		"/Users/ollar/Documents/dev/scetch-shop/app/controllers",
-		"/Users/ollar/Documents/dev/scetch-shop/app/helpers",
-		"/Users/ollar/Documents/dev/scetch-shop/app/routes",
-		"/Users/ollar/Documents/dev/scetch-shop/app/routes/product",
-		"/Users/ollar/Documents/dev/scetch-shop/app/templates",
-		"/Users/ollar/Documents/dev/scetch-shop/config"
+		"/Users/bss/Documents/Projects/sketch-store",
+		"/Users/bss/Documents/Projects/sketch-store/app",
+		"/Users/bss/Documents/Projects/sketch-store/app/controllers",
+		"/Users/bss/Documents/Projects/sketch-store/app/models"
 	],
 	"file_history":
 	[
+		"/Users/bss/Documents/Projects/sketch-store/functions/index.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/controllers/checkout.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/cart-block.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/models/order-product.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/models/order.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/entity-image.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/category/index.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/product/index.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/sketch-shop.sublime-project",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/application.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/services/cart.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/styles/_main.scss",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/site-header.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/site-footer.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/styles/_layout.scss",
+		"/Users/bss/Documents/Projects/sketch-store/app/locales/en/translations.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/application.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/index.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/services/file-storage.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/index.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/transitions.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/transitions/page.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/controllers/category/index.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/controllers/page/index.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/page/index.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/mixins/block-manage.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/block-manager.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/controllers/product/index.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/controllers/entity-manage.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/block-manager.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/page-block.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/styles/_vars.scss",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/cart-block.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/styles/app.scss",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/entity-description.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/categories.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/pages.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/admin-menu.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/entity-description.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/quick-links.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/page-description.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/page-description.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/category-slide.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/category-slide.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/product-slide.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/utils/strip-tags.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/helpers/first-text-block.js",
+		"/Users/bss/Documents/Projects/sketch-store/tests/unit/helpers/first-text-block-test.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/product-slide.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/products.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/product-block.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/product.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/router.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/product/index.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/controllers/page.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/category.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/category/edit.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/page/edit.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/page.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/models/product.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/models/category.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/models/page.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/product-block.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/page-edit.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/product/edit.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/entity-images-wrapper.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/page.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/page/index.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/pages.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/utils/transliterate.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/swiper-container.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/components/entity-images-wrapper.hbs",
+		"/Users/bss/Documents/Projects/sketch-store/app/components/index-categories-wrapper.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/controllers/index.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/helpers/slice.js",
+		"/Users/bss/Documents/Projects/sketch-store/.gitignore",
+		"/Users/bss/Documents/Projects/sketch-store/app/helpers/eq.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/routes/checkout.js",
+		"/Users/bss/Documents/Projects/sketch-store/app/templates/checkout.hbs",
 		"/Users/ollar/Documents/dev/scetch-shop/app/helpers/eq.js",
 		"/Users/ollar/Documents/dev/scetch-shop/app/routes/product/edit.js",
 		"/Users/ollar/Documents/dev/scetch-shop/app/templates/entity-manage.hbs",
@@ -147,33 +313,15 @@
 		"/Users/ollar/Documents/dev/scetch-shop/app/templates/page/index.hbs",
 		"/Users/ollar/Documents/dev/scetch-shop/app/templates/category.hbs",
 		"/Users/ollar/Documents/dev/scetch-shop/app/components/quick-links.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/routes/application.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/templates/application.hbs",
-		"/Users/ollar/Documents/dev/scetch-shop/app/initializers/i18n.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/routes/pages.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/locales/en/translations.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/styles/_main.scss",
-		"/Users/ollar/Documents/dev/scetch-shop/app/templates/components/site-footer.hbs",
-		"/Users/ollar/Documents/dev/scetch-shop/app/templates/components/site-header.hbs",
-		"/Users/ollar/Documents/dev/scetch-shop/app/components/site-footer.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/components/site-header.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/templates/components/page-block.hbs",
-		"/Users/ollar/Documents/dev/scetch-shop/app/components/page-block.js",
-		"/Users/ollar/Documents/dev/scetch-shop/config/environment.js",
-		"/Users/ollar/Documents/dev/scetch-shop/package.json",
-		"/Users/ollar/Library/Application Support/Sublime Text 3/Packages/User/log.sublime-snippet",
-		"/Users/ollar/Documents/dev/scetch-shop/sketch-shop.sublime-project",
-		"/Users/ollar/Documents/dev/scetch-shop/app/routes/page/details.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/routes/page/update.js",
-		"/Users/ollar/Documents/dev/scetch-shop/app/templates/page/update.hbs"
+		"/Users/ollar/Documents/dev/scetch-shop/app/routes/application.js"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 		]
@@ -183,6 +331,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"function",
+			"products",
+			"transitionToRoute",
+			"toUp",
+			"price",
+			"button",
+			".products-list",
+			"index",
+			"params",
+			"page",
+			"auto",
+			"category",
+			"background",
+			"window",
+			"category",
+			"images",
+			"length",
+			"products",
+			"email",
+			"sendWelcomeEmail",
 			"product",
 			"function",
 			"catController",
@@ -246,8 +414,132 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/styles/_main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4258,
+								4258
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Tomorrow-Night-Bright (SL).tmTheme",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/styles/_layout.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								585,
+								585
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Tomorrow-Night-Bright (SL).tmTheme",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 547.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/templates/index.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19,
+								3
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/components/swiper-container.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 371,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Tomorrow-Night-Bright (SL).tmTheme",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -304,6 +596,294 @@
 		"selected_items":
 		[
 			[
+				"swiper-container",
+				"app/components/swiper-container.js"
+			],
+			[
+				"index",
+				"functions/index.js"
+			],
+			[
+				"lay",
+				"app/styles/_layout.scss"
+			],
+			[
+				"main",
+				"app/styles/_main.scss"
+			],
+			[
+				"cart",
+				"app/components/cart-block.js"
+			],
+			[
+				"modelorder",
+				"app/models/order.js"
+			],
+			[
+				"check",
+				"app/controllers/checkout.js"
+			],
+			[
+				"order-product",
+				"app/models/order-product.js"
+			],
+			[
+				"entity-image",
+				"app/components/entity-image.js"
+			],
+			[
+				"categinde",
+				"app/templates/category/index.hbs"
+			],
+			[
+				"produinde",
+				"app/templates/product/index.hbs"
+			],
+			[
+				"serca",
+				"app/services/cart.js"
+			],
+			[
+				"appli",
+				"app/routes/application.js"
+			],
+			[
+				"cainde",
+				"app/templates/category/index.hbs"
+			],
+			[
+				"trans",
+				"app/locales/en/translations.js"
+			],
+			[
+				"footer",
+				"app/templates/components/site-footer.hbs"
+			],
+			[
+				"header",
+				"app/templates/components/site-header.hbs"
+			],
+			[
+				"appl",
+				"app/templates/application.hbs"
+			],
+			[
+				"files",
+				"app/services/file-storage.js"
+			],
+			[
+				"mixi",
+				"app/mixins/block-manage.js"
+			],
+			[
+				"pageinde",
+				"app/controllers/page/index.js"
+			],
+			[
+				"pagein",
+				"app/templates/page/index.hbs"
+			],
+			[
+				"sefile",
+				"app/services/file-storage.js"
+			],
+			[
+				"page",
+				"app/templates/components/page-block.hbs"
+			],
+			[
+				"block",
+				"app/templates/components/block-manager.hbs"
+			],
+			[
+				"cart-blo",
+				"app/templates/components/cart-block.hbs"
+			],
+			[
+				"vars",
+				"app/styles/_vars.scss"
+			],
+			[
+				"layout",
+				"app/styles/_layout.scss"
+			],
+			[
+				"servi",
+				"app/services/cart.js"
+			],
+			[
+				"tra",
+				"app/locales/en/translations.js"
+			],
+			[
+				"admin-menu",
+				"app/templates/components/admin-menu.hbs"
+			],
+			[
+				"categ",
+				"app/templates/categories.hbs"
+			],
+			[
+				"pages",
+				"app/templates/pages.hbs"
+			],
+			[
+				"categori",
+				"app/templates/categories.hbs"
+			],
+			[
+				"entity",
+				"app/components/entity-description.js"
+			],
+			[
+				"quick",
+				"app/templates/components/quick-links.hbs"
+			],
+			[
+				"entit",
+				"app/components/entity-description.js"
+			],
+			[
+				"entity-description",
+				"app/templates/components/entity-description.hbs"
+			],
+			[
+				"page-description",
+				"app/templates/components/page-description.hbs"
+			],
+			[
+				"product-slide",
+				"app/components/product-slide.js"
+			],
+			[
+				"ca",
+				"app/components/category-slide.js"
+			],
+			[
+				"strip-tags",
+				"app/utils/strip-tags.js"
+			],
+			[
+				"first-text-block",
+				"app/helpers/first-text-block.js"
+			],
+			[
+				"tempages",
+				"app/templates/pages.hbs"
+			],
+			[
+				"category-slide",
+				"app/templates/components/category-slide.hbs"
+			],
+			[
+				"teminde",
+				"app/templates/index.hbs"
+			],
+			[
+				"product-block",
+				"app/templates/components/product-block.hbs"
+			],
+			[
+				"templprodu",
+				"app/templates/products.hbs"
+			],
+			[
+				"router",
+				"app/router.js"
+			],
+			[
+				"quick-links",
+				"app/templates/components/quick-links.hbs"
+			],
+			[
+				"templpage",
+				"app/templates/page.hbs"
+			],
+			[
+				"routepage",
+				"app/routes/page/index.js"
+			],
+			[
+				"routpage",
+				"app/routes/pages.js"
+			],
+			[
+				"product",
+				"app/components/product-block.js"
+			],
+			[
+				"entity-images-wrapper",
+				"app/components/entity-images-wrapper.js"
+			],
+			[
+				"categoryinde",
+				"app/templates/category/index.hbs"
+			],
+			[
+				"prodblock",
+				"app/templates/components/product-block.hbs"
+			],
+			[
+				"produ",
+				"app/components/product-block.js"
+			],
+			[
+				"index-categories-wrapper",
+				"app/components/index-categories-wrapper.js"
+			],
+			[
+				"contrinde",
+				"app/controllers/index.js"
+			],
+			[
+				"temprodu",
+				"app/templates/components/product-slide.hbs"
+			],
+			[
+				"helpersli",
+				"app/helpers/slice.js"
+			],
+			[
+				"controinde",
+				"app/controllers/index.js"
+			],
+			[
+				"category-sl",
+				"app/templates/components/category-slide.hbs"
+			],
+			[
+				"helpeq",
+				"app/helpers/eq.js"
+			],
+			[
+				"templind",
+				"app/templates/index.hbs"
+			],
+			[
+				"serv",
+				"app/services/cart.js"
+			],
+			[
+				"servcart",
+				"app/services/cart.js"
+			],
+			[
+				"tempcheck",
+				"app/templates/checkout.hbs"
+			],
+			[
+				"routechec",
+				"app/routes/checkout.js"
+			],
+			[
+				"contrcheck",
+				"app/controllers/checkout.js"
+			],
+			[
+				"roucheck",
+				"app/routes/checkout.js"
+			],
+			[
 				"tement",
 				"app/templates/entity-manage.hbs"
 			],
@@ -356,16 +936,8 @@
 				"app/controllers/product/edit.js"
 			],
 			[
-				"router",
-				"app/router.js"
-			],
-			[
 				"model",
 				"app/models/product.js"
-			],
-			[
-				"mixi",
-				"app/mixins/block-manage.js"
 			],
 			[
 				"categedit",
@@ -468,10 +1040,6 @@
 				"app/controllers/page/edit.js"
 			],
 			[
-				"tempages",
-				"app/templates/pages.hbs"
-			],
-			[
 				"page-cre",
 				"app/controllers/page-create.js"
 			],
@@ -504,24 +1072,12 @@
 				"app/controllers/page/edit.js"
 			],
 			[
-				"templpage",
-				"app/templates/page/edit.hbs"
-			],
-			[
 				"contrpa",
 				"app/controllers/page/index.js"
 			],
 			[
-				"tra",
-				"app/locales/en/translations.js"
-			],
-			[
 				"routepages",
 				"app/routes/pages.js"
-			],
-			[
-				"pageinde",
-				"app/controllers/page/index.js"
 			],
 			[
 				"templheader",
@@ -550,66 +1106,6 @@
 			[
 				"comp",
 				"app/components/site-footer.js"
-			],
-			[
-				"pageindex",
-				"app/controllers/page/index.js"
-			],
-			[
-				"mode",
-				"app/models/page.js"
-			],
-			[
-				"compopage",
-				"app/templates/components/page-block.hbs"
-			],
-			[
-				"compo",
-				"app/components/page-block.js"
-			],
-			[
-				"contpage",
-				"app/controllers/page-create.js"
-			],
-			[
-				"modelpage",
-				"app/models/page.js"
-			],
-			[
-				"loca",
-				"app/locales/en/translations.js"
-			],
-			[
-				"pack",
-				"package.json"
-			],
-			[
-				"routepa",
-				"app/routes/page/details.js"
-			],
-			[
-				"pageup",
-				"app/routes/page/update.js"
-			],
-			[
-				"header",
-				"app/templates/components/site-header.hbs"
-			],
-			[
-				"temappl",
-				"app/templates/application.hbs"
-			],
-			[
-				"tempfoot",
-				"app/templates/components/site-footer.hbs"
-			],
-			[
-				"foot",
-				"app/components/site-footer.js"
-			],
-			[
-				"headerhbs",
-				"app/templates/components/site-header.hbs"
 			]
 		],
 		"width": 0.0
@@ -640,7 +1136,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 192.0,
+	"side_bar_width": 279.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
