@@ -369,6 +369,16 @@ textarea.editor {
 // =============================================================== Checkout page
 // =============================================================================
 
+.checkout-cart-content {
+  padding: 0;
+  margin: 0;
+  background-color: darken($white, 5%);
+}
+
+// =============================================================================
+// ================================================================ Loading page
+// =============================================================================
+
 #svg-loader {
   position: absolute;
   width: 100px;
@@ -377,53 +387,19 @@ textarea.editor {
   left: 50%;
   margin: -50px 0 0 -50px;
 
-  animation-name: spin;
-  animation-duration: 4s;
-  animation-timing-function: ease;
+  animation-name: scale;
+  animation-duration: 1s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.checkout-cart-content {
-  padding: 0;
-  margin: 0;
-  background-color: darken($white, 5%);
-}
-
-
-#figure-path {
-  stroke-dasharray: 3500;
-  // stroke-dashoffset: 3500;
-  // animation-name: dash;
-  // animation-duration: 2s;
-  // animation-timing-function: linear;
-  // animation-iteration-count: infinite;
-  // animation-direction: alternate;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-
-  40% {
-    transform: rotate(0);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
+@keyframes scale {
   90% {
-    transform: rotate(180deg);
+    transform: scaleY(1);
   }
 
   100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
+    transform: scaleY(0);
   }
 }
