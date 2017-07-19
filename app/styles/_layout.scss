@@ -21,6 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: ms(-1) ms(1);
+    flex-wrap: wrap;
   }
 
   .logo {
@@ -39,6 +40,10 @@ header {
       width: 100px;
     }
   }
+}
+
+.admin-menu {
+  flex-basis: 100%;
 }
 
 .cart-wrapper {
@@ -78,6 +83,31 @@ footer {
 // =============================================================================
 // =============================================================== Products list
 // =============================================================================
+
+.products-list-main {
+  @include sm() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .product-block {
+      flex-basis: 48%;
+      flex-grow: 0;
+      flex-shrink: 1;
+    }
+
+    @include md() {
+      .product-block {
+        flex-basis: 31%;
+
+        &:nth-child(n + 2):last-child {
+          margin-right: 34.5%;
+        }
+      }
+    }
+
+  }
+}
 
 .category-products {
   .products-list {

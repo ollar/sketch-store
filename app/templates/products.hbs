@@ -7,7 +7,7 @@
     {{link-to (t 'links.create_product') 'product-create'}}
   {{/quick-links}}
 
-  <div class="products-list">
+  <div class="products-list-main">
     {{#each model as |product|}}
       {{product-block product=product}}
     {{else}}
