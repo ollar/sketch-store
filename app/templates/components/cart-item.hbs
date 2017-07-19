@@ -1,7 +1,7 @@
 {{#if product.images}}
   <span class="product-image">
     {{#link-to 'product' product.alias}}
-      <img src="{{product.images.firstObject.url}}" class="pure-img">
+      <img src="{{product.images.firstObject.url}}" class="pure-img" alt="{{product.title}}">
     {{/link-to}}
   </span>
 {{/if}}
