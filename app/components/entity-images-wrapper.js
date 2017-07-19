@@ -5,8 +5,9 @@ export default Ember.Component.extend({
   didInsertElement() {
     this._super(...arguments);
 
-    this.$().css({
-      height: window.innerHeight / 3,
-    });
+    if (window.innerWidth < 768)
+      this.$().css({
+        height: window.innerHeight / 3,
+      });
   }
 });
