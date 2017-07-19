@@ -15,8 +15,6 @@ a {
 }
 
 header {
-  background-color: #3e3;
-
   .cart-wrapper,
   .logo-wrapper {
     text-align: center;
@@ -84,6 +82,17 @@ header {
     margin-right: 10px;
     display: flex;
     align-items: center;
+    overflow: hidden;
+  }
+
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .price {
+    white-space: nowrap;
   }
 
   .content {
@@ -373,6 +382,11 @@ textarea.editor {
   padding: 0;
   margin: 0;
   background-color: darken($white, 5%);
+  position: static;
+
+  li:nth-child(even) {
+    background-color: $white;
+  }
 }
 
 // =============================================================================
