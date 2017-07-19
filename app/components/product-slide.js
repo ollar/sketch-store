@@ -15,4 +15,19 @@ export default Ember.Component.extend({
   image: Ember.computed('product.images.[]', function() {
     return this.get('product.images.firstObject');
   }),
+
+  init() {
+    this._super(...arguments);
+    this.get('product.images');
+  },
+
+  didRender() {
+    this._super(...arguments);
+
+    if (!this.get('image.url')) return;
+
+    this.$().css({
+      'background-image': `url(${this.get('image.url')})`,
+    });
+  }
 });
