@@ -16,7 +16,7 @@ export default Ember.Component.extend({
     return null;
   }),
 
-  image: Ember.computed('product.images.firstObject.url', function() {
+  image: Ember.computed('product.images.@each', function() {
     console.log(this.get('product.images.firstObject'))
     return this.get('product.images.firstObject');
   }),
@@ -24,18 +24,16 @@ export default Ember.Component.extend({
   imageUrl: Ember.computed('image.url', function() {
     console.log(this.get('image.url'))
     console.log('this')
-    return '';
+    return this.get('image.url');
   }),
 
   didRender() {
     this._super(...arguments);
 
-    console.log(this.get('imageUrl'))
-
-    if (!this.get('image.url')) return;
+    if (!this.get('imageUrl')) return;
 
     this.$().css({
-      'background-image': `url(${this.get('image.url')})`,
+      'background-image': `url(${this.get('imageUrl')})`,
     });
   }
 });
