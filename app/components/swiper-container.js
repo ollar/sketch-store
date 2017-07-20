@@ -13,5 +13,10 @@ export default Ember.Component.extend({
         }, this.options)));
       });
     });
-  }
+  },
+
+  willDestroyElement() {
+    this._super(...arguments);
+    this.get('swiper').destroy();
+  },
 });

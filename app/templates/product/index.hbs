@@ -1,6 +1,6 @@
 <div class="product-details-page">
     {{#if model.images}}
-        {{#entity-images-wrapper}}
+        {{#entity-images-wrapper fluidImages=true}}
             {{#swiper-container class="images-wrapper full-width"
                 options=(hash
                     autoplay=5000

@@ -215,7 +215,7 @@ h6 {
     overflow: hidden;
     text-align: center;
     background-repeat: no-repeat;
-    background-position: 0;
+    background-position: center;
     background-size: cover;
   }
 }
@@ -307,12 +307,15 @@ textarea.editor {
     flex-shrink: 1;
 
     .product {
-      position: relative;
       height: 300px;
       display: flex;
       flex-direction: column;
       align-items: baseline;
       justify-content: space-around;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     .image-wrapper {
