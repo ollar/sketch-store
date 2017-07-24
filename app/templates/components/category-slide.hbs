@@ -13,6 +13,6 @@
 
 <div class="products" data-swiper-parallax="300">
   {{#each category.products as |product|}}
-    {{product-slide product=product}}
+    {{product-slide product=product image=product.images.firstObject}}
   {{/each}}
 </div>

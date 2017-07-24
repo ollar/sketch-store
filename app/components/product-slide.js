@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import stripTags from '../utils/strip-tags';
+import DS from 'ember-data';
 
 export default Ember.Component.extend({
   classNames: ['product'],
@@ -16,24 +17,13 @@ export default Ember.Component.extend({
     return null;
   }),
 
-  image: Ember.computed('product.images.@each', function() {
-    console.log(this.get('product.images.firstObject'))
-    return this.get('product.images.firstObject');
-  }),
-
-  imageUrl: Ember.computed('image.url', function() {
-    console.log(this.get('image.url'))
-    console.log('this')
-    return this.get('image.url');
-  }),
-
   didRender() {
     this._super(...arguments);
 
-    if (!this.get('imageUrl')) return;
+    if (!this.get('image.url')) return;
 
     this.$().css({
-      'background-image': `url(${this.get('imageUrl')})`,
+      'background-image': `url(${this.get('image.url')})`,
     });
   }
 });
