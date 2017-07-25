@@ -23,12 +23,12 @@ export default Ember.Component.extend({
   applyWrapperHeight() {
     if (this.attrs.fluidImages) {
       if (window.innerWidth < 768) {
-        this.$().css({ height: window.innerHeight / 3 });
+        this.$().css({ height: window.innerHeight / 2 });
       } else {
         this.$().css({ height: 'auto' });
       }
     } else {
-      this.$().css({ height: window.innerHeight / 3 });
+      this.$().css({ height: window.innerHeight / 2 });
     }
   },
 });

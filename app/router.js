@@ -13,7 +13,9 @@ Router.map(function() {
   });
   this.route('category-create', { path: 'category/new' });
 
-  this.route('products');
+  this.route('products', function() {
+    this.route('details', { path: ':product_alias' });
+  });
   this.route('product', { path: 'product/:product_alias' }, function() {
     this.route('edit');
   });

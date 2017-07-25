@@ -1,10 +1,12 @@
 <h3>
-  {{link-to product.title 'product' product.alias}}
+  {{!-- {{link-to product.title 'product' product.alias}} --}}
+  {{link-to product.title 'products.details' product.alias}}
 </h3>
 
 {{#if image}}
   <div class="image-wrapper">
-    {{#link-to 'product' product.alias}}
+    {{!-- {{#link-to 'product' product.alias}} --}}
+    {{#link-to 'products.details' product.alias}}
       <img src="{{image.url}}" class="" alt="{{product.title}}">
     {{/link-to}}
   </div>

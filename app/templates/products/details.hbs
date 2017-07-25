@@ -1,0 +1,43 @@
+<div class="product-details-page">
+    {{#if model.images}}
+        {{#entity-images-wrapper fluidImages=true}}
+            {{#swiper-container class="images-wrapper full-width"
+                options=(hash
+                    autoplay=5000
+                    effect='slide'
+                )}}
+                {{#each model.images as |image|}}
+                    {{entity-image imageUrl=image.url}}
+                {{/each}}
+            {{/swiper-container}}
+        {{/entity-images-wrapper}}
+    {{/if}}
+
+    <div class="content-wrapper">
+        <div class="center-wrapper">
+            <h1>
+                {{model.title}}
+            </h1>
+
+            {{!-- {{quick-links
+                type='product'
+                model=model
+                remove=(action 'removeProduct')}} --}}
+
+            <div class="page-content">
+
+                {{#each model.blocks as |block|}}
+                    {{page-block block=block}}
+                {{/each}}
+
+                <div class="price product-price">
+                    {{price model.price}}
+                </div>
+
+                <button class="pure-button button-add-to-cart" {{action 'addToCart'}}>
+                    {{t 'buttons.add_to_cart'}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
