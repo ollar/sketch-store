@@ -21,6 +21,7 @@
     "broccoli-manifest": "0.0.7",
     "broccoli-merge-trees": "^2.0.0",
     "ember-ajax": "^2.4.1",
+    "ember-browserify": "^1.2.0",
     "ember-cli": "2.12.2",
     "ember-cli-app-version": "^2.0.0",
     "ember-cli-autoprefixer": "^0.7.0",
@@ -60,6 +61,7 @@
   "private": true,
   "dependencies": {
     "dotenv": "^4.0.0",
-    "lodash.countby": "^4.6.0"
+    "lodash.countby": "^4.6.0",
+    "showdown": "^1.7.1"
   }
 }

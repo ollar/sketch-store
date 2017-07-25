@@ -1,0 +1,17 @@
+<div class="center-wrapper content-wrapper">
+  <h1>
+    {{t 'products.title'}}
+  </h1>
+
+  {{#quick-links}}
+    {{link-to (t 'links.create_product') 'product-create'}}
+  {{/quick-links}}
+
+  <div class="products-list-main">
+    {{#each model as |product|}}
+      {{product-block product=product}}
+    {{else}}
+      {{t 'messages.empty'}}
+    {{/each}}
+  </div>
+</div>
