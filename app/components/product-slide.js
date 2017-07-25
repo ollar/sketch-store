@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import stripTags from '../utils/strip-tags';
-import DS from 'ember-data';
 
 export default Ember.Component.extend({
   classNames: ['product'],
