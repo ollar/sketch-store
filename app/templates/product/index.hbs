@@ -7,7 +7,7 @@
                     effect='slide'
                 )}}
                 {{#each model.images as |image|}}
-                    {{entity-image imageUrl=image.url}}
+                    {{entity-image imageUrl=image.url handleClick=(action 'showImage' image)}}
                 {{/each}}
             {{/swiper-container}}
         {{/entity-images-wrapper}}
@@ -43,7 +43,12 @@
 </div>
 
 {{#if isImageModalVisible}}
-{{#modal-dialog}}
-  Oh hai there!
-{{/modal-dialog}}
+    {{#modal-dialog
+        onClose=(action (mut isImageModalVisible) false)
+        targetAttachment='none'
+        containerClass='centered-scrolling-container'
+        overlayClass='centered-scrolling-overlay'
+        wrapperClass='centered-scrolling-wrapper'}}
+        <img src="{{modalImage.url}}" class="pure-img">
+    {{/modal-dialog}}
 {{/if}}

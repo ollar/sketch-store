@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   cart: Ember.inject.service(),
 
   isImageModalVisible: false,
+  modalImage: null,
 
   actions: {
     removeProduct() {
@@ -33,7 +34,8 @@ export default Ember.Controller.extend({
     },
 
     showImage(image) {
-      console.log(image)
+      this.toggleProperty('isImageModalVisible');
+      this.set('modalImage', image);
     },
   }
 });

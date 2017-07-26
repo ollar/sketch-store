@@ -9,4 +9,8 @@ export default Ember.Component.extend({
         'background-image': `url(${this.get('imageUrl')})`,
       });
   },
+
+  click() {
+    if (this.attrs.handleClick) this.attrs.handleClick();
+  },
 });
