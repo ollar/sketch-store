@@ -11,10 +11,10 @@ export default Ember.Component.extend({
   },
 
   applyHeight() {
+    this.$().css({'min-height': 0});
+
     if (this.$().parent().height() >= this.$().height()) {
       this.$().css({'min-height': this.$().parent().height()});
-    } else {
-      this.$().css({'min-height': 0});
     }
   },
 
