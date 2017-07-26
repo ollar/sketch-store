@@ -16,3 +16,6 @@ $modularscale: (
 @import 'buttons';
 
 @import 'categories';
+
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";

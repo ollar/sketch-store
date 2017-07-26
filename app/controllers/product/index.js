@@ -4,6 +4,8 @@ import destroyModel from '../../utils/destroy-model';
 export default Ember.Controller.extend({
   cart: Ember.inject.service(),
 
+  isImageModalVisible: false,
+
   actions: {
     removeProduct() {
       if (this.get('model.category.content')) {
@@ -28,6 +30,10 @@ export default Ember.Controller.extend({
         type: 'info',
         text: this.get('i18n').t('messages.product_added_to_cart'),
       })
+    },
+
+    showImage(image) {
+      console.log(image)
     },
   }
 });
