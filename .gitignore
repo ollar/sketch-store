@@ -8,6 +8,9 @@
 /node_modules
 node_modules
 /bower_components
+.env
+*.sublime-workspace
+.DS_Store
 
 # misc
 /.sass-cache
@@ -15,7 +18,10 @@ node_modules
 /coverage/*
 /libpeerconnection.log
 npm-debug.log*
+yarn-error.log
 testem.log
-.env
-*.sublime-workspace
-.DS_Store
+
+# ember-try
+.node_modules.ember-try/
+bower.json.ember-try
+package.json.ember-try

@@ -1,10 +1,7 @@
 module.exports = {
   root: true,
-  globals: {
-    'Swiper': true,
-  },
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2017,
     sourceType: 'module'
   },
   extends: 'eslint:recommended',
