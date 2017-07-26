@@ -9,7 +9,17 @@
 
   <div class="categories-list">
     {{#each model as |category index|}}
-      {{entity-description model=category index=(add index 1)}}
+      {{#entity-description model=category index=(add index 1)}}
+        <div class="products-preview-wrapper">
+          {{#each category.products as |product|}}
+            <div class="product-preview puff-in-left">
+              {{#link-to 'product' product.alias}}
+                <img src="{{product.images.firstObject.url}}" />
+              {{/link-to}}
+            </div>
+          {{/each}}
+        </div>
+      {{/entity-description}}
     {{else}}
       {{t 'messages.empty'}}
     {{/each}}
