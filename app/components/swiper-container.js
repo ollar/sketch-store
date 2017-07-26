@@ -1,10 +1,31 @@
 import Ember from 'ember';
+import $ from 'jquery';
 
 export default Ember.Component.extend({
   swiper: null,
 
+  init() {
+    this._super(...arguments);
+
+    this.applyHeight = this.applyHeight.bind(this);
+  },
+
+  applyHeight() {
+    if (this.$().parent().height() >= this.$().height()) {
+      this.$().css({'min-height': this.$().parent().height()});
+    } else {
+      this.$().css({'min-height': 0});
+    }
+  },
+
   didInsertElement() {
     this._super(...arguments);
+
+    if (this.attrs.fullHeight) {
+      this.applyHeight();
+
+      $(window).on('resize', this.applyHeight);
+    }
 
     Ember.run(() => {
       Ember.run.schedule('afterRender', () => {
@@ -17,6 +38,10 @@ export default Ember.Component.extend({
 
   willDestroyElement() {
     this._super(...arguments);
-    this.get('swiper').destroy();
+
+    const swiper = this.get('swiper');
+    if (swiper) swiper.destroy();
+
+    $(window).off('resize', this.applyHeight);
   },
 });
