@@ -1,6 +1,8 @@
 @import 'vars';
 @import 'functions';
 @import 'mixins';
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
 
 $modularscale: (
   base: 1em,
@@ -17,5 +19,3 @@ $modularscale: (
 
 @import 'categories';
 
-@import "ember-modal-dialog/ember-modal-structure";
-@import "ember-modal-dialog/ember-modal-appearance";
