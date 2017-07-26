@@ -1,4 +1,4 @@
-<div class="product-details-page">
+{{#product-height-wrapper class="product-details-page"}}
     {{#if model.images}}
         {{#entity-images-wrapper fluidImages=true}}
             {{#swiper-container class="images-wrapper full-width"
@@ -40,15 +40,15 @@
             </div>
         </div>
     </div>
-</div>
 
-{{#if isImageModalVisible}}
-    {{#modal-dialog
-        onClose=(action (mut isImageModalVisible) false)
-        targetAttachment='none'
-        containerClass='centered-scrolling-container'
-        overlayClass='centered-scrolling-overlay'
-        wrapperClass='centered-scrolling-wrapper'}}
-        <img src="{{modalImage.url}}" class="pure-img">
-    {{/modal-dialog}}
-{{/if}}
+    {{#if isImageModalVisible}}
+        {{#modal-dialog
+            onClose=(action (mut isImageModalVisible) false)
+            targetAttachment='none'
+            containerClass='centered-scrolling-container'
+            overlayClass='centered-scrolling-overlay'
+            wrapperClass='centered-scrolling-wrapper'}}
+            <img src="{{modalImage.url}}" class="pure-img">
+        {{/modal-dialog}}
+    {{/if}}
+{{/product-height-wrapper}}
