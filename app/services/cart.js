@@ -1,11 +1,13 @@
-import Ember from 'ember';
-import _ from 'lodash/collection';
+import { computed } from '@ember/object';
+import Service, { inject as service } from '@ember/service';
+import _ from 'npm:lodash/collection';
+import { all } from 'rsvp';
 
-export default Ember.Service.extend({
-  store: Ember.inject.service(),
-  items: [],
+export default Service.extend({
+  store: service(),
+  items: computed(() => []),
 
-  itemsSorted: Ember.computed('items.[]', function() {
+  itemsSorted: computed('items.[]', function() {
     return _.countBy(this.get('items'));
   }),
 
@@ -22,7 +24,7 @@ export default Ember.Service.extend({
   },
 
   getItems() {
-    return Ember.RSVP.all(_.map(this.get('itemsSorted'), (qty, productId) => {
+    return all(_.map(this.get('itemsSorted'), (qty, productId) => {
       return this.get('store').findRecord('product', productId).then((product) => {
         product.set('qty', qty);
         return product;

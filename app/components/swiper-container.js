@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import $ from 'jquery';
+import Swiper from 'npm:swiper';
 
 export default Ember.Component.extend({
   swiper: null,
