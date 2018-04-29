@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   notify: Ember.inject.service(),
   notificationTypes: ['info', 'success', 'warning', 'alert', 'error'],
 

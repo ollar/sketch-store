@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Service, { inject as service } from '@ember/service';
 
-export default Ember.Service.extend({
-  firebase: Ember.inject.service(),
-  store: Ember.inject.service(),
+export default Service.extend({
+  firebase: service(),
+  store: service(),
 
-  storageRef: Ember.computed(function() {
+  storageRef: computed(function() {
     return this.get('firebase').database.app.storage();
   }),
 
