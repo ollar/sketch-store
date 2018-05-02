@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
 import EntityManagerConrtroller from '../entity-manage';
 
 export default EntityManagerConrtroller.extend({
@@ -7,8 +7,8 @@ export default EntityManagerConrtroller.extend({
     this.set('categories', this.get('store').findAll('category'));
   },
 
-  categoryId: Ember.computed.readOnly('model.category.id'),
-  category: Ember.computed.readOnly('model.category'),
+  categoryId: computed.readOnly('model.category.id'),
+  category: computed.readOnly('model.category'),
 
   newCategoryId: null,
 

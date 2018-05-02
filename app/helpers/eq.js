@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
 export function eq(params/*, hash*/) {
   return !!params.reduce((sum, a) => (sum === a) ? a : null);
 }
 
-export default Ember.Helper.helper(eq);
+export default helper(eq);

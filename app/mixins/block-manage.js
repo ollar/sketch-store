@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 
-const BlockManageMixin = Ember.Mixin.create({
+const BlockManageMixin = Mixin.create({
   actions: {
     addBlock(blockType) {
       const block = this.get('store').createRecord('block', {
@@ -17,6 +17,6 @@ const BlockManageMixin = Ember.Mixin.create({
   }
 });
 
-BlockManageMixin[Ember.NAME_KEY] = 'BlockManageMixin';
+// BlockManageMixin[Ember.NAME_KEY] = 'BlockManageMixin';
 
 export default BlockManageMixin;

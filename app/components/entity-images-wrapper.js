@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import $ from 'jquery';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['entity-images-wrapper'],
 
   init() {
@@ -22,7 +22,7 @@ export default Ember.Component.extend({
   },
 
   applyWrapperHeight() {
-    if (this.attrs.fluidImages) {
+    if (this.fluidImages) {
       if (window.innerWidth < 768) {
         this.$().css({ height: window.innerHeight / 2 });
       } else {

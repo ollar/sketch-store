@@ -1,11 +1,13 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['quick-links'],
 
-  session: Ember.inject.service(),
+  session: service(),
 
-  isAuthenticated: Ember.computed('session.isAuthenticated', function() {
+  isAuthenticated: computed('session.isAuthenticated', function() {
     return this.get('session.isAuthenticated');
   }),
 

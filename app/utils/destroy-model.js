@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { all } from 'rsvp';
 
 export default function destroyModel(model, relations) {
   if (!model) return;
@@ -11,6 +11,6 @@ export default function destroyModel(model, relations) {
     });
   }
 
-  return Ember.RSVP.all(relatedModels.map((model) => model.destroyRecord()))
+  return all(relatedModels.map((model) => model.destroyRecord()))
     .then(() => model.destroyRecord());
 }

@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
 export function slice([sentence, limit]) {
   if (!sentence) return '';
@@ -6,4 +6,4 @@ export function slice([sentence, limit]) {
   return sentence.slice(0, limit);
 }
 
-export default Ember.Helper.helper(slice);
+export default helper(slice);

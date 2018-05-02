@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNameBindings: ['dragover', 'isEmpty'],
   dragover: false,
 
@@ -33,12 +33,11 @@ export default Ember.Component.extend({
       e.preventDefault();
       this.set('dragover', false);
       const files = Array.prototype.slice.call(e.dataTransfer.files);
-
-      this.sendAction('uploadImage', files)
+      this.uploadImage(files);
     },
 
     removeImage(imageModel) {
-      this.sendAction('removeImage', imageModel);
+      this.removeImage(imageModel);
     }
   },
 });

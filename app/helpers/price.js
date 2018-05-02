@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
 export function price(params/*, hash*/) {
   return params + ' \u20BD';
 }
 
-export default Ember.Helper.helper(price);
+export default helper(price);

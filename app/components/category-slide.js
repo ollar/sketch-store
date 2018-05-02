@@ -1,7 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+
 import stripTags from '../utils/strip-tags';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['swiper-slide', 'category-slide'],
 
   init() {
@@ -18,7 +20,7 @@ export default Ember.Component.extend({
       });
   },
 
-  description: Ember.computed('category.blocks.@each.content', function() {
+  description: computed('category.blocks.@each.content', function() {
     if (this.get('category.blocks.length')) {
       return stripTags(this.get('category.blocks.firstObject.content.text'));
     }
@@ -26,7 +28,7 @@ export default Ember.Component.extend({
     return null;
   }),
 
-  image: Ember.computed('category.images.[]', function() {
+  image: computed('category.images.[]', function() {
     return this.get('category.images.firstObject');
   }),
 

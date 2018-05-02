@@ -1,13 +1,15 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { computed } from '@ember/object';
 import DS from 'ember-data';
+import { inject as service } from '@ember/service';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   email: '',
   phone: '',
 
-  cart: Ember.inject.service(),
+  cart: service(),
 
-  products: Ember.computed('cart.items.[]', function() {
+  products: computed('cart.items.[]', function() {
     return DS.PromiseArray.create({
       promise: this.get('cart').getItems(),
     });

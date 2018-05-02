@@ -1,13 +1,15 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['block-manager'],
   classNameBindings: ['type'],
 
-  type: Ember.computed.alias('block.type'),
-  fileStorage: Ember.inject.service(),
+  type: computed.alias('block.type'),
+  fileStorage: service(),
 
-  images: Ember.computed(function() {
+  images: computed(function() {
     if (this.get('block.type') === 'image' && this.get('block.content.url')) {
       return [
         {

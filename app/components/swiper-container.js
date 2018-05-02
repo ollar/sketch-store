@@ -1,8 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import $ from 'jquery';
 import Swiper from 'npm:swiper';
+import { run, schedule } from '@ember/runloop';
 
-export default Ember.Component.extend({
+export default Component.extend({
   swiper: null,
 
   init() {
@@ -22,14 +23,14 @@ export default Ember.Component.extend({
   didInsertElement() {
     this._super(...arguments);
 
-    if (this.attrs.fullHeight) {
+    if (this.fullHeight) {
       this.applyHeight();
 
       $(window).on('resize', this.applyHeight);
     }
 
-    Ember.run(() => {
-      Ember.run.schedule('afterRender', () => {
+    run(() => {
+      schedule('afterRender', () => {
         this.set('swiper', new Swiper(this.$('.swiper-container'), Object.assign({}, {
           effect: 'fade',
         }, this.options)));

@@ -1,8 +1,10 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
 export default Route.extend({
-  notify: Ember.inject.service(),
-  notificationTypes: ['info', 'success', 'warning', 'alert', 'error'],
+  notify: service(),
+  notificationTypes: computed(() => ['info', 'success', 'warning', 'alert', 'error']),
 
   beforeModel() {
     return this.get('session').fetch()

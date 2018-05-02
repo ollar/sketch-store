@@ -1,11 +1,13 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { computed } from '@ember/object';
+import { inject as service } from '@ember/service';
 import BlockManagerMixin from '../mixins/block-manage';
 import ImageManageMixin from '../mixins/image-manage';
 
-export default Ember.Controller.extend(BlockManagerMixin, ImageManageMixin, {
-  blocks: Ember.computed.alias('model.blocks'),
-  images: Ember.computed.alias('model.images'),
-  fileStorage: Ember.inject.service(),
+export default Controller.extend(BlockManagerMixin, ImageManageMixin, {
+  blocks: computed.alias('model.blocks'),
+  images: computed.alias('model.images'),
+  fileStorage: service(),
 
   actions: {
     handleSubmit() {

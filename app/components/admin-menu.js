@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
 
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'nav',
   classNames: ['admin-menu', 'pure-menu', 'pure-menu-horizontal'],
 
-  session: Ember.inject.service(),
+  session: service(),
 
   actions: {
     logout() {

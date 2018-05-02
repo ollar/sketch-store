@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import { inject as service } from '@ember/service';
 
-const ImageManageMixin = Ember.Mixin.create({
-  fileStorage: Ember.inject.service(),
+const ImageManageMixin = Mixin.create({
+  fileStorage: service(),
 
   actions: {
     uploadImage(files) {
@@ -33,6 +34,6 @@ const ImageManageMixin = Ember.Mixin.create({
   }
 });
 
-ImageManageMixin[Ember.NAME_KEY] = 'ImageManageMixin';
+// ImageManageMixin[Ember.NAME_KEY] = 'ImageManageMixin';
 
 export default ImageManageMixin;

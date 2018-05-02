@@ -1,10 +1,12 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+
 import stripTags from '../utils/strip-tags';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['product'],
 
-  description: Ember.computed('product.blocks.@each.type', function() {
+  description: computed('product.blocks.@each.type', function() {
     if (this.get('product.blocks.length')) {
       return stripTags(
         this.get('product.blocks')

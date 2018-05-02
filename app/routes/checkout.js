@@ -1,10 +1,12 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+import { hash } from 'rsvp';
 
 export default Route.extend({
-  cart: Ember.inject.service(),
+  cart: service(),
 
   model() {
-    return Ember.RSVP.hash({
+    return hash({
       order: this.get('store').createRecord('order'),
     });
   }

@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['swiper-slide'],
 
   didRender() {
@@ -11,6 +11,6 @@ export default Ember.Component.extend({
   },
 
   click() {
-    if (this.attrs.handleClick) this.attrs.handleClick();
+    if (this.handleClick) this.handleClick();
   },
 });

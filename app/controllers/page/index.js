@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
 import destroyModel from '../../utils/destroy-model';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   actions: {
     removePage() {
       destroyModel(this.get('model'), ['blocks'])

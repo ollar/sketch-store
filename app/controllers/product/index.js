@@ -1,8 +1,9 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 import destroyModel from '../../utils/destroy-model';
 
-export default Ember.Controller.extend({
-  cart: Ember.inject.service(),
+export default Controller.extend({
+  cart: service(),
 
   isImageModalVisible: false,
   modalImage: null,

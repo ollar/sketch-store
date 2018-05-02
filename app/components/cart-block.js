@@ -1,13 +1,16 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import DS from 'ember-data';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
+import { run, schedule } from '@ember/runloop';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['cart-wrapper'],
   classNameBindings: ['cartIsOpen'],
 
-  router: Ember.inject.service('-routing'),
+  router: service('-routing'),
 
-  cart: Ember.inject.service(),
+  cart: service(),
   cartIsOpen: false,
 
   init() {
@@ -17,25 +20,25 @@ export default Ember.Component.extend({
     router.addObserver('currentRouteName', this, 'closeCart');
   },
 
-  products: Ember.computed('cart.items.[]', function() {
+  products: computed('cart.items.[]', function() {
     return DS.PromiseArray.create({
       promise: this.get('cart').getItems(),
     });
   }),
 
-  productsNumber: Ember.computed('cart.items.[]', 'products.isFulfilled', function() {
+  productsNumber: computed('cart.items.[]', 'products.isFulfilled', function() {
     return this.get('cart.items.length');
   }),
 
-  total: Ember.computed('products.@each.price', function() {
+  total: computed('products.@each.price', function() {
     return this.get('products').reduce((sum, product) => {
       return sum + product.get('qty') * product.get('price');
     }, 0);
   }),
 
   closeCart() {
-    Ember.run(() =>
-      Ember.run.schedule('afterRender', () =>
+    run(() =>
+      schedule('afterRender', () =>
         this.set('cartIsOpen', false)
       )
     );
